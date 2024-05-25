@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Proyecto Final Bases de datos Avanzadas
 
-## Getting Started
+Este repositorio contiene el proyecto final de la materia bases de datos avanzadas, el cual consiste en una aplicación web que permite a los usuarios visualizar y realizar operaciones CRUD sobre una base de datos de un servicio de streaming mediante una interfaz gráfica.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [NextUI](https://nextui.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Oracle Database](https://www.oracle.com/database/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ¿Cómo correr el proyecto?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clonar el repositorio
+2. Instalar las dependencias
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```bash
+    npm install
+    ```
+3. Clonar el archivo `.env.example` y renombrarlo a `.env.local` y llenar las variables de entorno con los datos necesarios
 
-## Learn More
+4. Correr el proyecto
+   ```bash
+    npm run dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+## Créditos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Christian Leyva
+- Rogelio Hernandez
+- Oliver Alexis
+- Carlos
