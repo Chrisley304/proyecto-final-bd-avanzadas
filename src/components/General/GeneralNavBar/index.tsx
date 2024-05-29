@@ -12,6 +12,8 @@ import {
     DropdownItem,
     DropdownMenu,
     NavbarMenuToggle,
+    NavbarMenuItem,
+    NavbarMenu,
 } from "@nextui-org/react";
 import { logoMexFlix } from "@/image-paths";
 import Image from "next/image";
@@ -25,6 +27,12 @@ export default function GeneralNavbar({}: Props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const actualPath = usePathname();
 
+    const menuItems = [
+        { name: "Inicio", url: "/inicio" },
+        { name: "Peliculas", url: "/peliculas" },
+        { name: "Series", url: "/series" },
+    ];
+
     return (
         <Navbar position="sticky">
             <NavbarBrand>
@@ -37,43 +45,23 @@ export default function GeneralNavbar({}: Props) {
                     className="hidden sm:flex gap-4"
                     justify="center"
                 >
-                    <NavbarItem isActive={actualPath === "/inicio"}>
-                        <Link
-                            href="/inicio"
-                            color={
-                                actualPath !== "/inicio"
-                                    ? "foreground"
-                                    : "danger"
-                            }
+                    {menuItems.map((item) => (
+                        <NavbarItem
+                            key={item.name}
+                            isActive={actualPath === item.url}
                         >
-                            Inicio
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem isActive={actualPath === "/peliculas"}>
-                        <Link
-                            href="/peliculas"
-                            color={
-                                actualPath !== "/peliculas"
-                                    ? "foreground"
-                                    : "danger"
-                            }
-                            aria-current="page"
-                        >
-                            Películas
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem isActive={actualPath === "/series"}>
-                        <Link
-                            color={
-                                actualPath !== "/series"
-                                    ? "foreground"
-                                    : "danger"
-                            }
-                            href="/series"
-                        >
-                            Series
-                        </Link>
-                    </NavbarItem>
+                            <Link
+                                href={item.url}
+                                color={
+                                    actualPath === item.url
+                                        ? "danger"
+                                        : "foreground"
+                                }
+                            >
+                                {item.name}
+                            </Link>
+                        </NavbarItem>
+                    ))}
                 </NavbarContent>
             )}
             <NavbarContent justify="end">
@@ -119,6 +107,27 @@ export default function GeneralNavbar({}: Props) {
                     className="sm:hidden"
                 />
             </NavbarContent>
+            <NavbarMenu>
+                {menuItems.map((item, index) => (
+                    <NavbarMenuItem
+                        key={`${item}-${index}`}
+                        isActive={actualPath === item.url}
+                    >
+                        <Link
+                            color={
+                                actualPath === item.url
+                                    ? "danger"
+                                    : "foreground"
+                            }
+                            className="w-full"
+                            href={item.url}
+                            size="lg"
+                        >
+                            {item.name}
+                        </Link>
+                    </NavbarMenuItem>
+                ))}
+            </NavbarMenu>
         </Navbar>
     );
 }
