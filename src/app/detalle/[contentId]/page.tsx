@@ -1,13 +1,16 @@
 "use client";
-import React, { useState } from "react";
-import { Button } from "@nextui-org/react";
-import Image from "next/image";
-import { strangerThingsHeader } from "@/image-paths";
 import ContentPreviewCard from "@/components/General/ContentPreviewCard";
-import { useRouter } from "next/navigation";
+import { strangerThingsHeader } from "@/image-paths";
+import { Button, Select, SelectItem } from "@nextui-org/react";
+import Image from "next/image";
+import React from "react";
 
-export default function Inicio() {
-    const router = useRouter();
+type Props = {
+    params: { contentId: string };
+};
+
+export default function DetailPage({ params }: Props) {
+    const seasons = ["1ra temporada", "2da temporada"];
 
     return (
         <>
@@ -35,14 +38,10 @@ export default function Inicio() {
                             variant="shadow"
                             className="mr-4"
                         >
-                            Ver trailer
+                            Ver ahora
                         </Button>
-                        <Button
-                            size="lg"
-                            variant="flat"
-                            onClick={() => router.push("/detalle/1")}
-                        >
-                            Detalle
+                        <Button size="lg" variant="bordered">
+                            Ver trailer
                         </Button>
                     </div>
                 </div>
@@ -56,9 +55,17 @@ export default function Inicio() {
             </header>
             <main className="container mx-auto mt-0 px-5 md:px-0 md:mt-5">
                 <section className="mt-5">
-                    <h3 className="text-xl font-extrabold">
-                        Nuevos lanzamientos
-                    </h3>
+                    <h3 className="text-xl font-extrabold">Capítulos</h3>
+                    <Select
+                        label="Temporada"
+                        placeholder="Temporada"
+                        defaultSelectedKeys={["1ra temporada"]}
+                        className="max-w-xs mt-5"
+                    >
+                        {seasons.map((season) => (
+                            <SelectItem key={season}>{season}</SelectItem>
+                        ))}
+                    </Select>
                     <div className="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
                         <ContentPreviewCard
                             title="Mujer con audifonos"
@@ -88,11 +95,13 @@ export default function Inicio() {
                             duration="5 temporadas"
                             year="2019"
                         />
-                    </div>
-                </section>
-                <section className="mt-5">
-                    <h3 className="text-xl font-extrabold">Historial</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
                         <ContentPreviewCard
                             title="Mujer con audifonos"
                             category="Drama"
