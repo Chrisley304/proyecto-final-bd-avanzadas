@@ -48,15 +48,93 @@ export default function Inicio() {
                 </div>
             </header>
             <main className="container mx-auto mt-5">
-                <section>
+                <section className="mt-5">
                     <h3 className="text-xl font-extrabold">
                         Nuevos lanzamientos
                     </h3>
-                    <div className="py-2 flex gap-5">
-                        <ContentPreviewCard />
-                        <ContentPreviewCard />
-                        <ContentPreviewCard />
-                        <ContentPreviewCard />
+                    <div className="columns-4 mt-5 gap-5">
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
+                    </div>
+                </section>
+                <section className="mt-5">
+                    <h3 className="text-xl font-extrabold">Historial</h3>
+                    <div className="columns-4 mt-5 gap-5">
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
+                        <ContentPreviewCard
+                            title="Mujer con audifonos"
+                            category="Drama"
+                            image="https://nextui.org/images/hero-card.jpeg"
+                            duration="5 temporadas"
+                            year="2019"
+                        />
                     </div>
                 </section>
             </main>
