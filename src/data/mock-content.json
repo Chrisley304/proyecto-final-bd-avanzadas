@@ -1,0 +1,223 @@
+[
+    {
+        "id": 1,
+        "type": "pelicula",
+        "title": "El Resplandor",
+        "description": "Una familia se traslada a un hotel aislado durante el invierno donde una presencia siniestra influye en el padre para la violencia.",
+        "coverImage": "https://s2.ppllstatics.com/elcorreo/www/multimedia/202005/25/media/cortadas/el-resplandor-kKKH-U1102973139567IB-1248x770@RC.jpg",
+        "info": {
+            "id": 1,
+            "contentId": 1,
+            "duration": "2h 26m",
+            "source": "https://example.com/el-resplandor.mp4"
+        },
+        "trailerLink": "https://youtu.be/Y8z1LAkgR0s?si=vn1wF5ZW6lRiUyll",
+        "category": "terror",
+        "launchDate": "1980-05-23T00:00:00.000Z"
+    },
+    {
+        "id": 2,
+        "type": "serie",
+        "title": "Breaking Bad",
+        "description": "Un profesor de química con cáncer terminal se convierte en un fabricante de metanfetaminas para asegurar el futuro de su familia.",
+        "coverImage": "https://www.lifeboxset.com/wp-content/uploads/2023/06/breaking-bad-nombre-walter-white-esconde-significado-oculto-pocos-conocen.jpg",
+        "info": {
+            "id": 2,
+            "contentId": 2,
+            "chapters": [
+                {
+                    "id": 1,
+                    "contentId": 2,
+                    "serieId": 2,
+                    "duration": "58m",
+                    "season": 1,
+                    "number": 1,
+                    "coverImage": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWi8MokudHdyyo2mns_HTM2NYmN0vuu5gMHytgiQu_Tu1fjv7lNZAh0Fwno-KGkLe3EbtJ3sT5HKl1L4JWMrC5Euyky26Au5vHjZoK7t-sQot_rxOFuI1MLU.jpg?r=451",
+                    "source": "https://example.com/breaking-bad-s01e01.mp4"
+                },
+                {
+                    "id": 2,
+                    "contentId": 2,
+                    "serieId": 2,
+                    "duration": "47m",
+                    "season": 1,
+                    "number": 2,
+                    "coverImage": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWi8MokudHdyyo2mns_HTM2NYmN0vuu5gMHytgiQu_Tu1fjv7lNZAh0Fwno-KGkLe3EbtJ3sT5HKl1L4JWMrC5Euyky26Au5vHjZoK7t-sQot_rxOFuI1MLU.jpg?r=451",
+                    "source": "https://example.com/breaking-bad-s01e02.mp4"
+                }
+            ],
+            "duration": 5
+        },
+        "trailerLink": "https://youtu.be/mXd1zTwcQ18?si=3S0i7tBQDABJGpoR",
+        "category": "acción",
+        "launchDate": "2008-01-20T00:00:00.000Z"
+    },
+    {
+        "id": 3,
+        "type": "documental",
+        "title": "Nuestro Planeta",
+        "description": "Una serie documental que explora las maravillas naturales de la Tierra y los impactos del cambio climático.",
+        "coverImage": "https://dummyimage.com/600x400/000/fff.jpg&text=Contenido",
+        "info": {
+            "id": 3,
+            "contentId": 3,
+            "duration": "50m",
+            "source": "https://example.com/nuestro-planeta.mp4"
+        },
+        "trailerLink": "https://youtu.be/IrER_EpwGjg?si=V7ltZQjymWXTOTBL",
+        "category": "educación",
+        "launchDate": "2019-04-05T00:00:00.000Z"
+    },
+    {
+        "id": 4,
+        "type": "pelicula",
+        "title": "Inception",
+        "description": "Un ladrón que roba secretos corporativos a través del uso de la tecnología de compartir sueños se le da la tarea inversa de plantar una idea en la mente de un C.E.O.",
+        "coverImage": "https://dummyimage.com/600x400/000/fff.jpg&text=Contenido",
+        "info": {
+            "id": 4,
+            "contentId": 4,
+            "duration": "2h 28m",
+            "source": "https://example.com/inception.mp4"
+        },
+        "trailerLink": "https://example.com/inception-trailer.mp4",
+        "category": "aventura",
+        "launchDate": "2010-07-16T00:00:00.000Z"
+    },
+    {
+        "id": 5,
+        "type": "serie",
+        "title": "Stranger Things",
+        "description": "Cuando un niño desaparece, su madre, un jefe de policía y sus amigos deben enfrentarse a fuerzas terroríficas para recuperarlo.",
+        "coverImage": "https://ca-times.brightspotcdn.com/dims4/default/f4b2933/2147483647/strip/true/crop/1204x716+0+0/resize/1200x714!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fe5%2F15%2F72193efd4f51a95b10473df29e65%2Funiversal-studios-halloween-horror-nights-x-stranger-things.jpg",
+        "info": {
+            "id": 5,
+            "contentId": 5,
+            "chapters": [
+                {
+                    "id": 3,
+                    "contentId": 5,
+                    "serieId": 5,
+                    "duration": "55m",
+                    "season": 1,
+                    "number": 1,
+                    "coverImage": "https://media.es.wired.com/photos/6323b58c6fafe1c21452636c/16:9/w_2560%2Cc_limit/Uncomfortable-Comforts-of-Stranger-Things-Culture-T_6_Unit_02910_R.jpg",
+                    "source": "https://example.com/stranger-things-s01e01.mp4"
+                },
+                {
+                    "id": 4,
+                    "contentId": 5,
+                    "serieId": 5,
+                    "duration": "49m",
+                    "season": 1,
+                    "number": 2,
+                    "coverImage": "https://media.es.wired.com/photos/6323b58c6fafe1c21452636c/16:9/w_2560%2Cc_limit/Uncomfortable-Comforts-of-Stranger-Things-Culture-T_6_Unit_02910_R.jpg",
+                    "source": "https://example.com/stranger-things-s01e02.mp4"
+                }
+            ],
+            "duration": 4
+        },
+        "trailerLink": "https://youtu.be/d0JYlUTbv1A?si=uQntibCHPftUNujQ",
+        "category": "aventura",
+        "launchDate": "2016-07-15T00:00:00.000Z"
+    },
+    {
+        "id": 6,
+        "type": "documental",
+        "title": "Cosmos: A Spacetime Odyssey",
+        "description": "Una continuación de la serie de 1980, que explora las leyes de la naturaleza y coordina hechos científicos con visualizaciones impresionantes.",
+        "coverImage": "https://dummyimage.com/600x400/000/fff.jpg&text=Contenido",
+        "info": {
+            "id": 6,
+            "contentId": 6,
+            "duration": "45m",
+            "source": "https://example.com/cosmos.mp4"
+        },
+        "trailerLink": "https://example.com/cosmos-trailer.mp4",
+        "category": "educación",
+        "launchDate": "2014-03-09T00:00:00.000Z"
+    },
+    {
+        "id": 7,
+        "type": "pelicula",
+        "title": "Gladiator",
+        "description": "Un ex general romano se propone vengar el asesinato de su familia y su emperador caído convirtiéndose en el gladiador más grande de Roma.",
+        "coverImage": "https://dummyimage.com/600x400/000/fff.jpg&text=Contenido",
+        "info": {
+            "id": 7,
+            "contentId": 7,
+            "duration": "2h 35m",
+            "source": "https://example.com/gladiator.mp4"
+        },
+        "trailerLink": "https://example.com/gladiator-trailer.mp4",
+        "category": "acción",
+        "launchDate": "2000-05-05T00:00:00.000Z"
+    },
+    {
+        "id": 8,
+        "type": "serie",
+        "title": "The Office",
+        "description": "Un falso documental sobre las vidas diarias de los empleados que trabajan en la oficina de Scranton, Pennsylvania, de la compañía de papel Dunder Mifflin.",
+        "coverImage": "https://dummyimage.com/600x400/000/fff.jpg&text=Contenido",
+        "info": {
+            "id": 8,
+            "contentId": 8,
+            "chapters": [
+                {
+                    "id": 5,
+                    "contentId": 8,
+                    "serieId": 8,
+                    "duration": "22m",
+                    "season": 1,
+                    "number": 1,
+                    "source": "https://example.com/the-office-s01e01.mp4"
+                },
+                {
+                    "id": 6,
+                    "contentId": 8,
+                    "serieId": 8,
+                    "duration": "24m",
+                    "season": 1,
+                    "number": 2,
+                    "source": "https://example.com/the-office-s01e02.mp4"
+                }
+            ],
+            "duration": 9
+        },
+        "trailerLink": "https://example.com/the-office-trailer.mp4",
+        "category": "comedia",
+        "launchDate": "2005-03-24T00:00:00.000Z"
+    },
+    {
+        "id": 9,
+        "type": "pelicula",
+        "title": "Matrix",
+        "description": "Un hacker descubre la verdadera naturaleza de su realidad y su papel en la guerra contra sus controladores.",
+        "coverImage": "https://dummyimage.com/600x400/000/fff.jpg&text=Contenido",
+        "info": {
+            "id": 9,
+            "contentId": 9,
+            "duration": "2h 16m",
+            "source": "https://example.com/matrix.mp4"
+        },
+        "trailerLink": "https://example.com/matrix-trailer.mp4",
+        "category": "acción",
+        "launchDate": "1999-03-31T00:00:00.000Z"
+    },
+    {
+        "id": 10,
+        "type": "documental",
+        "title": "The Social Dilemma",
+        "description": "Explora el impacto peligroso de las redes sociales en la sociedad, con testimonios de expertos en tecnología y ex empleados de grandes empresas tecnológicas.",
+        "coverImage": "https://dummyimage.com/600x400/000/fff.jpg&text=Contenido",
+        "info": {
+            "id": 10,
+            "contentId": 10,
+            "duration": "1h 34m",
+            "source": "https://example.com/the-social-dilemma.mp4"
+        },
+        "trailerLink": "https://example.com/the-social-dilemma-trailer.mp4",
+        "category": "educación",
+        "launchDate": "2020-09-09T00:00:00.000Z"
+    }
+]

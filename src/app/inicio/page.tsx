@@ -1,114 +1,82 @@
 "use client";
-import React, { useState } from "react";
-import { Button } from "@nextui-org/react";
+import React, { useEffect, useState } from "react";
+import { Button, Spinner } from "@nextui-org/react";
 import Image from "next/image";
 import { strangerThingsHeader } from "@/image-paths";
 import ContentPreviewCard from "@/components/General/ContentPreviewCard";
 import { useRouter } from "next/navigation";
 import useAuth from "@/hooks/useAuth";
+import axios from "axios";
+import ContentPageHeader from "@/components/General/ContentPageHeader";
+import { Content } from "@/types/Content";
 
 export default function Inicio() {
     const router = useRouter();
     const { auth, setAuth } = useAuth();
+    const [content, setContent] = useState<Content[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    return (
+    useEffect(() => {
+        if (!auth?.isLogged) {
+            router.push("/");
+        }
+    }, [auth, router]);
+
+    useEffect(() => {
+        const fetchContent = async () => {
+            setIsLoading(true);
+            try {
+                const response = await axios.get("/api/content");
+                setContent(response.data);
+            } catch (error) {
+                console.log(error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchContent();
+    }, []);
+
+    console.log("Content: ", content);
+    const higlightedContent = content[0];
+
+    return isLoading ? (
+        <Spinner size="lg" />
+    ) : (
         <>
-            <header className="grid md:grid-cols-2 container mx-auto py-10">
-                <div className="order-2 md:order-1 flex w-full flex-col justify-center p-5 md:p-0">
-                    <h2 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
-                        Stranger Dings
-                    </h2>
-                    <div className="flex gap-2 my-5 text-lg">
-                        <span>2016</span>
-                        <span>|</span>
-                        <span>16+</span>
-                        <span>|</span>
-                        <span>5 temporadas</span>
-                    </div>
-                    <p className="my-5 text-base">
-                        Cuando un niño desaparece, sus amigos, su familia y la
-                        policía se ven envueltos en una serie de eventos
-                        misteriosos.
-                    </p>
-                    <div>
-                        <Button
-                            size="lg"
-                            color="danger"
-                            variant="shadow"
-                            className="mr-4"
-                        >
-                            Ver trailer
-                        </Button>
-                        <Button
-                            size="lg"
-                            variant="flat"
-                            onClick={() => router.push("/detalle/1")}
-                        >
-                            Detalle
-                        </Button>
-                    </div>
-                </div>
-                <div className="order-1 md:order-2 w-full px-5 md:px-0">
-                    <Image
-                        src={strangerThingsHeader}
-                        className="rounded-xl"
-                        alt="Stranger Dings"
-                    />
-                </div>
-            </header>
+            <ContentPageHeader
+                content={higlightedContent}
+                actionButtonText="Ver ahora"
+                onActionButtonClick={() => console.log("Ver ahora")}
+                secondaryButtonText="Ver detalles"
+                onSecondaryButtonClick={() =>
+                    router.push(`/detalle/${higlightedContent.id}`)
+                }
+            />
             <main className="container mx-auto mt-0 px-5 md:px-0 md:mt-5">
                 <section className="mt-5">
                     <h3 className="text-xl font-extrabold">
                         Nuevos lanzamientos
                     </h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
-                        <ContentPreviewCard
-                            title="Mujer con audifonos"
-                            category="Drama"
-                            image="https://nextui.org/images/hero-card.jpeg"
-                            duration="5 temporadas"
-                            year="2019"
-                        />
-                        <ContentPreviewCard
-                            title="Mujer con audifonos"
-                            category="Drama"
-                            image="https://nextui.org/images/hero-card.jpeg"
-                            duration="5 temporadas"
-                            year="2019"
-                        />
-                        <ContentPreviewCard
-                            title="Mujer con audifonos"
-                            category="Drama"
-                            image="https://nextui.org/images/hero-card.jpeg"
-                            duration="5 temporadas"
-                            year="2019"
-                        />
-                        <ContentPreviewCard
-                            title="Mujer con audifonos"
-                            category="Drama"
-                            image="https://nextui.org/images/hero-card.jpeg"
-                            duration="5 temporadas"
-                            year="2019"
-                        />
+                        {content.slice(0, 4).map((content) => (
+                            <ContentPreviewCard
+                                key={content.id}
+                                content={content}
+                            />
+                        ))}
                     </div>
                 </section>
                 <section className="mt-5">
                     <h3 className="text-xl font-extrabold">Historial</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
-                        <ContentPreviewCard
-                            title="Mujer con audifonos"
-                            category="Drama"
-                            image="https://nextui.org/images/hero-card.jpeg"
-                            duration="5 temporadas"
-                            year="2019"
-                        />
-                        <ContentPreviewCard
-                            title="Mujer con audifonos"
-                            category="Drama"
-                            image="https://nextui.org/images/hero-card.jpeg"
-                            duration="5 temporadas"
-                            year="2019"
-                        />
+                        {content.slice(4).map((content) => (
+                            <ContentPreviewCard
+                                key={content.id}
+                                content={content}
+                            />
+                        ))}
                     </div>
                 </section>
             </main>

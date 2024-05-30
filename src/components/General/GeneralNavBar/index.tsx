@@ -90,7 +90,8 @@ export default function GeneralNavbar({}: Props) {
                         <Dropdown>
                             <DropdownTrigger>
                                 <Button variant="light">
-                                    Christian Leyva <BsChevronDown />
+                                    {`${auth?.user?.name} ${auth?.user?.lastName}`}{" "}
+                                    <BsChevronDown />
                                 </Button>
                             </DropdownTrigger>
                             <DropdownMenu aria-label="Static Actions">
