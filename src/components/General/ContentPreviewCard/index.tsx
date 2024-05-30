@@ -21,6 +21,7 @@ export default function ContentPreviewCard({ content }: Props) {
             isFooterBlurred
             radius="lg"
             className="border-none mb-5 w-full h-[175px] cursor-pointer hover:scale-110"
+            onClick={handleClick}
         >
             <Image
                 width={200}

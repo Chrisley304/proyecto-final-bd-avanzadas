@@ -12,7 +12,7 @@ import { Content } from "@/types/Content";
 
 export default function Inicio() {
     const router = useRouter();
-    const { auth, setAuth } = useAuth();
+    const { auth } = useAuth();
     const [content, setContent] = useState<Content[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -38,7 +38,6 @@ export default function Inicio() {
         fetchContent();
     }, []);
 
-    console.log("Content: ", content);
     const higlightedContent = content[0];
 
     return isLoading ? (
@@ -47,7 +46,7 @@ export default function Inicio() {
         <>
             <ContentPageHeader
                 content={higlightedContent}
-                actionButtonText="Ver ahora"
+                actionButtonText="Ver trailer"
                 onActionButtonClick={() => console.log("Ver ahora")}
                 secondaryButtonText="Ver detalles"
                 onSecondaryButtonClick={() =>

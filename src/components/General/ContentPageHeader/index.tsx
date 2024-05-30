@@ -6,7 +6,7 @@ import { Content } from "@/types/Content";
 import { log } from "console";
 
 type Props = {
-    content: Content;
+    content: Content | null;
     actionButtonText: string;
     onActionButtonClick: () => void;
     secondaryButtonText: string;
@@ -20,7 +20,9 @@ export default function ContentPageHeader({
     secondaryButtonText,
     onSecondaryButtonClick,
 }: Props) {
-    const launchYear = new Date(content?.launchDate).getFullYear();
+    const launchYear = content
+        ? new Date(content?.launchDate).getFullYear()
+        : 0;
 
     return (
         <header className="grid md:grid-cols-2 container mx-auto py-10">
