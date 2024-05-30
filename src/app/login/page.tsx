@@ -3,15 +3,32 @@ import React, { useState } from "react";
 import { Button, Input } from "@nextui-org/react";
 import { EyeSlashFilledIcon } from "@/components/Icons/EyeSlashFilledIcon";
 import { EyeFilledIcon } from "@/components/Icons/EyeFilledIcon";
+import { useRouter } from "next/navigation";
+import mockUsers from "@/data/mock-users.json";
+import useAuth from "@/hooks/useAuth";
 
 export default function Home() {
     const [isVisible, setIsVisible] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const router = useRouter();
+    const { auth, setAuth } = useAuth();
 
     const toggleVisibility = () => setIsVisible(!isVisible);
 
     const isButtonDisabled = email === "" || password === "";
+
+    const handleLogin = () => {
+        const foundAuth = mockUsers.find(
+            (el) => el.user.email === email && el.user.password === password
+        );
+        if (foundAuth) {
+            setAuth(foundAuth);
+            router.push("/inicio");
+        } else {
+            alert("Usuario o contraseña incorrectos");
+        }
+    };
 
     return (
         <div
@@ -70,6 +87,7 @@ export default function Home() {
                         color="success"
                         className="text-white"
                         isDisabled={isButtonDisabled}
+                        onClick={handleLogin}
                     >
                         Iniciar sesión
                     </Button>

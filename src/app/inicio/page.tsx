@@ -5,9 +5,11 @@ import Image from "next/image";
 import { strangerThingsHeader } from "@/image-paths";
 import ContentPreviewCard from "@/components/General/ContentPreviewCard";
 import { useRouter } from "next/navigation";
+import useAuth from "@/hooks/useAuth";
 
 export default function Inicio() {
     const router = useRouter();
+    const { auth, setAuth } = useAuth();
 
     return (
         <>

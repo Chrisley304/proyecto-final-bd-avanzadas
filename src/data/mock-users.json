@@ -1,0 +1,92 @@
+[
+    {
+        "user": {
+            "id": 1,
+            "email": "chris@chrisley.dev",
+            "password": "#Contraseña1234",
+            "lastName": "Christian",
+            "name": "Leyva",
+            "profiles": [],
+            "bankInfo": {
+                "id": 1,
+                "cardFullName": "Christian Leyva",
+                "cardNumber": "1234567812345678",
+                "cvv": "123",
+                "expirationDate": "12/24"
+            }
+        },
+        "isLogged": true
+    },
+    {
+        "user": {
+            "id": 2,
+            "email": "jane.smith@example.com",
+            "password": "anotherSecurePass456",
+            "lastName": "Smith",
+            "name": "Jane",
+            "profiles": [],
+            "bankInfo": {
+                "id": 2,
+                "cardFullName": "Jane Smith",
+                "cardNumber": "8765432187654321",
+                "cvv": "456",
+                "expirationDate": "11/25"
+            }
+        },
+        "isLogged": true
+    },
+    {
+        "user": {
+            "id": 3,
+            "email": "alice.jones@example.com",
+            "password": "password789",
+            "lastName": "Jones",
+            "name": "Alice",
+            "profiles": [],
+            "bankInfo": {
+                "id": 3,
+                "cardFullName": "Alice Jones",
+                "cardNumber": "1122334455667788",
+                "cvv": "789",
+                "expirationDate": "01/26"
+            }
+        },
+        "isLogged": true
+    },
+    {
+        "user": {
+            "id": 4,
+            "email": "bob.brown@example.com",
+            "password": "superSecurePass012",
+            "lastName": "Brown",
+            "name": "Bob",
+            "profiles": [],
+            "bankInfo": {
+                "id": 4,
+                "cardFullName": "Bob Brown",
+                "cardNumber": "4433221100112233",
+                "cvv": "012",
+                "expirationDate": "02/27"
+            }
+        },
+        "isLogged": true
+    },
+    {
+        "user": {
+            "id": 5,
+            "email": "carol.white@example.com",
+            "password": "securePass345",
+            "lastName": "White",
+            "name": "Carol",
+            "profiles": [],
+            "bankInfo": {
+                "id": 5,
+                "cardFullName": "Carol White",
+                "cardNumber": "5566778899001122",
+                "cvv": "345",
+                "expirationDate": "03/28"
+            }
+        },
+        "isLogged": true
+    }
+]

@@ -19,19 +19,28 @@ import { logoMexFlix } from "@/image-paths";
 import Image from "next/image";
 import { BsChevronDown } from "react-icons/bs";
 import { usePathname } from "next/navigation";
+import useAuth from "@/hooks/useAuth";
+import { useRouter } from "next/navigation";
 
 type Props = {};
 
 export default function GeneralNavbar({}: Props) {
-    const isLoggedIn = true;
+    const { auth, setAuth } = useAuth();
+    const isLoggedIn = auth?.isLogged || false;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const actualPath = usePathname();
+    const router = useRouter();
 
     const menuItems = [
         { name: "Inicio", url: "/inicio" },
         { name: "Peliculas", url: "/peliculas" },
         { name: "Series", url: "/series" },
     ];
+
+    const handleLogout = () => {
+        setAuth(null);
+        router.push("/");
+    };
 
     return (
         <Navbar position="sticky">
@@ -95,6 +104,7 @@ export default function GeneralNavbar({}: Props) {
                                     key="delete"
                                     className="text-danger"
                                     color="danger"
+                                    onClick={handleLogout}
                                 >
                                     Cerrar sesión
                                 </DropdownItem>
