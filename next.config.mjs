@@ -8,6 +8,7 @@ const nextConfig = {
             "ca-times.brightspotcdn.com",
             "media.es.wired.com",
             "dummyimage.com",
+            "occ-0-2794-2219.1.nflxso.net",
         ],
     },
 };

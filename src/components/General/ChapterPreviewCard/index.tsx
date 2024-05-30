@@ -1,19 +1,16 @@
 import React from "react";
-import { Content } from "@/types/Content";
+import { Chapter } from "@/types/Content";
 import { Button, Card, CardFooter } from "@nextui-org/react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { BsPlayCircle } from "react-icons/bs";
 
 type Props = {
-    content: Content;
+    chapter: Chapter;
 };
 
-export default function ContentPreviewCard({ content }: Props) {
-    const launchYear = new Date(content?.launchDate).getFullYear();
-    const router = useRouter();
-
+export default function ChapterPreviewCard({ chapter }: Props) {
     const handleClick = () => {
-        router.push(`/detalle/${content.id}`);
+        console.log("Reproduciendo capítulo", chapter.id);
     };
 
     return (
@@ -25,21 +22,17 @@ export default function ContentPreviewCard({ content }: Props) {
             <Image
                 width={200}
                 height={175}
-                alt={content.title + " cover"}
+                alt={"Chapter " + chapter.number + " cover"}
                 className="z-0 w-full h-full object-cover"
-                src={content.coverImage}
+                src={chapter.coverImage || ""}
             />
             <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
                 <div>
-                    <p className="text-sm text-white">{content.title}</p>
-                    <p className="text-tiny text-white/80">
-                        {launchYear} | {content.category}
+                    <p className="text-sm text-white">
+                        Capitulo {chapter.number}
                     </p>
                     <p className="text-tiny text-white/80">
-                        {content.type} |{" "}
-                        {`${content.info?.duration}${
-                            content.type === "serie" ? " temporadas" : ""
-                        }`}
+                        Temporada {chapter.season} | {chapter.duration}
                     </p>
                 </div>
                 <Button
@@ -50,7 +43,7 @@ export default function ContentPreviewCard({ content }: Props) {
                     size="sm"
                     onClick={handleClick}
                 >
-                    Ver detalles
+                    Reproducir <BsPlayCircle />
                 </Button>
             </CardFooter>
         </Card>

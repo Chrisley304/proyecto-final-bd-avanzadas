@@ -41,7 +41,9 @@ export default function Inicio() {
     const higlightedContent = content[0];
 
     return isLoading ? (
-        <Spinner size="lg" />
+        <div className="w-screen h-screen flex items-center justify-center">
+            <Spinner size="lg" />
+        </div>
     ) : (
         <>
             <ContentPageHeader
