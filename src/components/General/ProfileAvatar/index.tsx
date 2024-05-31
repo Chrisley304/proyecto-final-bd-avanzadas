@@ -38,7 +38,7 @@ export default function ProfileAvatar({
     return (
         <div className="flex flex-col gap-5 items-center">
             <div
-                className="relative inline-flex items-center justify-center w-36 h-36 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 cursor-pointer"
+                className="relative inline-flex items-center justify-center w-36 h-36 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 cursor-pointer hover:border-red-600 border-transparent border-2"
                 onClick={handleClick}
             >
                 {createNewProfile ? (
@@ -57,7 +57,7 @@ export default function ProfileAvatar({
                     : profile?.profileNickname}
                 {!createNewProfile && (
                     <BsPencilFill
-                        className="text-xl cursor-pointer"
+                        className="text-xl cursor-pointer hover:text-red-600"
                         onClick={() => handleEditProfile(profile)}
                     />
                 )}
