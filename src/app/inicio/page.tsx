@@ -19,12 +19,6 @@ export default function Inicio() {
     const [showTrailer, setShowTrailer] = useState(false);
 
     useEffect(() => {
-        if (!auth?.isLogged) {
-            router.push("/");
-        }
-    }, [auth, router]);
-
-    useEffect(() => {
         const fetchContent = async () => {
             setIsLoading(true);
             try {
@@ -43,7 +37,7 @@ export default function Inicio() {
     const higlightedContent = content[0];
 
     return isLoading ? (
-        <div className="w-screen h-screen flex items-center justify-center">
+        <div className="w-full h-screen flex items-center justify-center">
             <Spinner size="lg" />
         </div>
     ) : (

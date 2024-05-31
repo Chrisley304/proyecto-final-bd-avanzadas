@@ -5,7 +5,6 @@ import {
     NavbarBrand,
     NavbarContent,
     NavbarItem,
-    Link,
     Button,
     Dropdown,
     DropdownTrigger,
@@ -21,6 +20,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { usePathname } from "next/navigation";
 import useAuth from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 type Props = {};
 
@@ -61,10 +61,10 @@ export default function GeneralNavbar({}: Props) {
                         >
                             <Link
                                 href={item.url}
-                                color={
+                                className={
                                     actualPath === item.url
-                                        ? "danger"
-                                        : "foreground"
+                                        ? "text-red-600"
+                                        : ""
                                 }
                             >
                                 {item.name}

@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { Auth } from "@/types/User";
 import { useLocalStorage } from "./useLocalStorage";
 
@@ -12,22 +12,23 @@ export const AuthContext = createContext<{
 });
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-    const [auth, setStoredAuth] = useState<Auth>(() => {
+    const [auth, setStoredAuth] = useState<Auth | null>(null);
+
+    useEffect(() => {
         try {
             const item = window.localStorage.getItem("auth");
-            return item ? JSON.parse(item) : null;
+            if (item) {
+                setStoredAuth(JSON.parse(item));
+            }
         } catch (error) {
             console.log(error);
-            return null;
         }
-    });
+    }, []);
 
     const setAuth = (newAuth: Auth | null) => {
         try {
-            const valueToStore =
-                newAuth instanceof Function ? newAuth(auth) : newAuth;
-            setStoredAuth(valueToStore);
-            window.localStorage.setItem("auth", JSON.stringify(valueToStore));
+            setStoredAuth(newAuth);
+            window.localStorage.setItem("auth", JSON.stringify(newAuth));
         } catch (error) {
             console.log(error);
         }
