@@ -58,7 +58,7 @@ export default function DetailPage({ params }: Props) {
     };
 
     return isLoading && !content ? (
-        <div className="w-screen h-screen flex items-center justify-center">
+        <div className="w-full h-full flex items-center justify-center">
             <Spinner size="lg" />
         </div>
     ) : (

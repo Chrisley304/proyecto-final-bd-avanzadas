@@ -24,7 +24,7 @@ export default function Home() {
         );
         if (foundAuth) {
             setAuth(foundAuth);
-            router.push("/inicio");
+            router.push("/quien-esta-viendo");
         } else {
             alert("Usuario o contraseña incorrectos");
         }

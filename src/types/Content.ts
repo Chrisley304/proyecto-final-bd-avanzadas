@@ -19,12 +19,11 @@ export type Serie = {
 
 export type Chapter = {
     id: number;
-    contentId: number;
     serieId: number;
     duration: string;
     season: number;
     number: number;
-    source: string;
+    source: string | null;
     coverImage: string | null;
 };
 
@@ -32,7 +31,7 @@ export type Movie = {
     id: number;
     contentId: number;
     duration: string;
-    source: string;
+    source: string | null;
 };
 
 export type History = {

@@ -1,6 +1,7 @@
 export type Auth = {
     user: User | null;
     isLogged: boolean;
+    selectedProfile: Profile | null;
 };
 
 export type User = {
@@ -15,7 +16,6 @@ export type User = {
 
 export type Profile = {
     id: number;
-    userId: string;
     profileImage: string;
     profileNickname: string;
 };

@@ -21,7 +21,7 @@ export default function RootLayout({
             <body className={`${inter.className} dark`}>
                 <Providers>
                     <GeneralNavbar />
-                    {children}
+                    <div className="pt-16 h-screen">{children}</div>
                 </Providers>
             </body>
         </html>

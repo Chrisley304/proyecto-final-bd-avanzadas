@@ -13,6 +13,7 @@ import {
     NavbarMenuToggle,
     NavbarMenuItem,
     NavbarMenu,
+    Avatar,
 } from "@nextui-org/react";
 import { logoMexFlix } from "@/image-paths";
 import Image from "next/image";
@@ -30,6 +31,7 @@ export default function GeneralNavbar({}: Props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const actualPath = usePathname();
     const router = useRouter();
+    const userProfile = auth?.selectedProfile || null;
 
     const menuItems = [
         { name: "Inicio", url: "/inicio" },
@@ -43,7 +45,7 @@ export default function GeneralNavbar({}: Props) {
     };
 
     return (
-        <Navbar position="sticky">
+        <Navbar className="fixed">
             <NavbarBrand>
                 <Link href={isLoggedIn ? "/inicio" : "/"}>
                     <Image src={logoMexFlix} alt="MexFlix" width={75} />
@@ -86,32 +88,37 @@ export default function GeneralNavbar({}: Props) {
                         </Button>
                     </NavbarItem>
                 ) : (
-                    <NavbarItem className="flex">
-                        <Dropdown>
-                            <DropdownTrigger>
-                                <Button variant="light">
-                                    {`${auth?.user?.name} ${auth?.user?.lastName}`}{" "}
-                                    <BsChevronDown />
-                                </Button>
-                            </DropdownTrigger>
-                            <DropdownMenu aria-label="Static Actions">
-                                <DropdownItem
-                                    key="edit-profile"
-                                    href="/editar-perfil"
-                                >
-                                    Editar perfil
-                                </DropdownItem>
-                                <DropdownItem
-                                    key="delete"
-                                    className="text-danger"
-                                    color="danger"
-                                    onClick={handleLogout}
-                                >
-                                    Cerrar sesión
-                                </DropdownItem>
-                            </DropdownMenu>
-                        </Dropdown>
-                    </NavbarItem>
+                    userProfile && (
+                        <NavbarItem className="flex">
+                            <Dropdown>
+                                <DropdownTrigger>
+                                    <Button variant="light">
+                                        <Avatar
+                                            src={userProfile?.profileImage}
+                                            size="sm"
+                                        />
+                                        {userProfile?.profileNickname}
+                                        <BsChevronDown />
+                                    </Button>
+                                </DropdownTrigger>
+                                <DropdownMenu aria-label="Static Actions">
+                                    <DropdownItem key="edit-profile">
+                                        <Link href="/quien-esta-viendo">
+                                            Seleccionar perfil
+                                        </Link>
+                                    </DropdownItem>
+                                    <DropdownItem
+                                        key="delete"
+                                        className="text-danger"
+                                        color="danger"
+                                        onClick={handleLogout}
+                                    >
+                                        Cerrar sesión
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </Dropdown>
+                        </NavbarItem>
+                    )
                 )}
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -132,7 +139,6 @@ export default function GeneralNavbar({}: Props) {
                             }
                             className="w-full"
                             href={item.url}
-                            size="lg"
                         >
                             {item.name}
                         </Link>

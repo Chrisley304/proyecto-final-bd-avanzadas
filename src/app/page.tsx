@@ -59,7 +59,7 @@ export default function Home() {
             isLogged: true,
         };
         setAuth(newAuth);
-        router.push("/inicio");
+        router.push("/quien-esta-viendo");
     };
 
     return (
@@ -68,7 +68,7 @@ export default function Home() {
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8),
                 rgba(0, 0, 0, 0.75)), url(/img/backgrounds/movies_background.jpg)`,
             }}
-            className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
+            className="h-full bg-cover bg-center bg-no-repeat bg-fixed"
         >
             <header className="container mx-auto text-center p-10">
                 <h2 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
