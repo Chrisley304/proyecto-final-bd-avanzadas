@@ -1,156 +1,93 @@
---
--- ER/Studio 8.0 SQL Code Generation
--- Company :      FI-UNAM
--- Project :      prueba.DM1
--- Author :       RogelioYaelHJ
---
--- Date Created : Wednesday, May 29, 2024 11:36:46
--- Target DBMS : Oracle 11g
---
--- 
--- TABLE: Capitulos 
---
-CREATE TABLE Capitulos(
-    Id_Capitulo NUMBER(20, 0) NOT NULL,
-    Id_Serie NUMBER(20, 0) NOT NULL,
-    Id_Contenido NUMBER(20, 0) NOT NULL,
-    CAP_Source BLOB NOT NULL,
-    CAP_Duracion NUMBER(3, 0) NOT NULL,
-    CAP_Temporada NUMBER(2, 0) NOT NULL,
-    CAP_Number NUMBER(4, 0) NOT NULL,
-    CONSTRAINT PK_Capitulos PRIMARY KEY (Id_Capitulo, Id_Serie, Id_Contenido)
-);
--- 
--- TABLE: Contenido 
---
-CREATE TABLE Contenido(
-    Id_Contenido NUMBER(20, 0) NOT NULL,
-    Id_TipoContenido NUMBER(2, 0) NOT NULL,
-    CONT_Nombre VARCHAR2(40) NOT NULL,
-    CONT_FechaLanz DATE NOT NULL,
-    CONT_COVER BLOB NOT NULL,
-    CONT_Sonido BLOB NOT NULL,
-    CONT_Trailer BLOB NOT NULL,
-    CONSTRAINT PK_Contenido PRIMARY KEY (Id_Contenido)
-);
--- 
--- TABLE: Historial 
---
-CREATE TABLE Historial(
-    Id_Historial NUMBER(18, 0) NOT NULL,
-    Id_Perfil NUMBER(18, 0) NOT NULL,
-    Id_Usuario NUMBER(18, 0) NOT NULL,
-    CONSTRAINT PK_Historial PRIMARY KEY (Id_Historial)
-);
--- 
--- TABLE: HistorialContenido 
---
-CREATE TABLE HistorialContenido(
-    Id_HistorialContenido NUMBER(38, 0) NOT NULL,
-    Id_Pelicula NUMBER(20, 0),
-    Id_Contenido NUMBER(20, 0),
-    Id_Capitulo NUMBER(20, 0),
-    Id_Serie NUMBER(20, 0),
-    Id_Historial NUMBER(18, 0) NOT NULL,
-    CONSTRAINT PK_HistorialContenido PRIMARY KEY (Id_HistorialContenido)
-);
--- 
--- TABLE: Info_Bancaria 
---
+CREATE DATABASE MexFlix;
+-- DROP DATABASE MexFlix;
+USE MexFlix;
+
 CREATE TABLE Info_Bancaria(
-    Id_InfoBancaria NUMBER(18, 0) NOT NULL,
+    Id_InfoBancaria BIGINT NOT NULL AUTO_INCREMENT,
     INFOBANC_Caducidad DATE NOT NULL,
-    INFOBANC_NombrePropietario VARCHAR2(50) NOT NULL,
-    INFOBANC_CVV NUMBER(3, 0) NOT NULL,
-    INFOBANC_NumTarjeta NUMBER(16, 0) NOT NULL,
+    INFOBANC_NombrePropietario VARCHAR(50) NOT NULL,
+    INFOBANC_CVV SMALLINT NOT NULL,
+    INFOBANC_NumTarjeta BIGINT NOT NULL,
     CONSTRAINT PK_InfoBancaria PRIMARY KEY (Id_InfoBancaria)
 );
--- 
--- TABLE: Pelicula 
---
-CREATE TABLE Pelicula(
-    Id_Pelicula NUMBER(20, 0) NOT NULL,
-    Id_Contenido NUMBER(20, 0) NOT NULL,
-    PELI_Source BLOB NOT NULL,
-    PELI_Duracion NUMBER(3, 0) NOT NULL,
-    CONSTRAINT PK_Pelicula PRIMARY KEY (Id_Pelicula, Id_Contenido)
+CREATE TABLE Usuario(
+    Id_Usuario BIGINT NOT NULL AUTO_INCREMENT,
+    Id_InfoBancaria BIGINT NOT NULL,
+    USR_Password VARCHAR(25) NOT NULL,
+    USR_Correo VARCHAR(40) NOT NULL,
+    USR_Nombre VARCHAR(25) NOT NULL,
+    USR_Apellido VARCHAR(25) NOT NULL,
+    CONSTRAINT PK_Usuario PRIMARY KEY (Id_Usuario),
+    CONSTRAINT UQ_USR_Correo UNIQUE (USR_Correo),
+    CONSTRAINT FK_InfoBancaria FOREIGN KEY (Id_InfoBancaria) REFERENCES Info_Bancaria(Id_InfoBancaria)
 );
--- 
--- TABLE: Perfil 
---
 CREATE TABLE Perfil(
-    Id_Perfil NUMBER(18, 0) NOT NULL,
-    Id_Usuario NUMBER(18, 0) NOT NULL,
-    PERF_Img BLOB NOT NULL,
-    PERF_Nombre VARCHAR2(25) NOT NULL,
-    CONSTRAINT PK_Perfil PRIMARY KEY (Id_Perfil, Id_Usuario)
+    Id_Perfil BIGINT NOT NULL AUTO_INCREMENT,
+    Id_Usuario BIGINT NOT NULL,
+    PERF_Img MEDIUMBLOB NOT NULL,
+    PERF_Nombre VARCHAR(25) NOT NULL,
+    CONSTRAINT PK_Perfil PRIMARY KEY (Id_Perfil),
+    CONSTRAINT FK_Usuario_Perfil FOREIGN KEY (Id_Usuario) REFERENCES Usuario(Id_Usuario),
+    CONSTRAINT UQ_Usuario_Perfil UNIQUE (Id_Usuario, Id_Perfil)
 );
--- 
--- TABLE: Serie 
---
-CREATE TABLE Serie(
-    Id_Serie NUMBER(20, 0) NOT NULL,
-    Id_Contenido NUMBER(20, 0) NOT NULL,
-    SER_Capitulos NUMBER(4, 0) NOT NULL,
-    SERIE_Temporadas NUMBER(2, 0) NOT NULL,
-    CONSTRAINT PK_Serie PRIMARY KEY (Id_Serie, Id_Contenido)
-);
--- 
--- TABLE: TipoContenido 
---
 CREATE TABLE TipoContenido(
-    Id_TipoContenido NUMBER(2, 0) NOT NULL,
-    TIPOCONT_Descripcion VARCHAR2(15) NOT NULL,
+    Id_TipoContenido TINYINT NOT NULL AUTO_INCREMENT,
+    TIPOCONT_Descripcion VARCHAR(15) NOT NULL,
     CONSTRAINT PK_TipoContenido PRIMARY KEY (Id_TipoContenido)
 );
--- 
--- TABLE: Usuario 
---
-CREATE TABLE Usuario(
-    Id_Usuario NUMBER(18, 0) NOT NULL,
-    Id_InfoBancaria NUMBER(18, 0) NOT NULL,
-    USR_Password VARCHAR2(25) NOT NULL,
-    USR_Correo VARCHAR2(25) NOT NULL,
-    USR_Apellido VARCHAR2(20) NOT NULL,
-    USR_Nombre VARCHAR2(20) NOT NULL,
-    CONSTRAINT PK_Usuario PRIMARY KEY (Id_Usuario)
+CREATE TABLE Genero(
+    Id_Genero TINYINT NOT NULL AUTO_INCREMENT,
+    genero VARCHAR(15) NOT NULL,
+    CONSTRAINT PK_Genero PRIMARY KEY (Id_Genero)
 );
--- 
--- TABLE: Capitulos 
---
-ALTER TABLE Capitulos
-ADD CONSTRAINT FK_CAPITULO_SERIE FOREIGN KEY (Id_Serie, Id_Contenido) REFERENCES Serie(Id_Serie, Id_Contenido);
--- 
--- TABLE: Contenido 
---
-ALTER TABLE Contenido
-ADD CONSTRAINT FK_TIPO_CONTENIDO FOREIGN KEY (Id_TipoContenido) REFERENCES TipoContenido(Id_TipoContenido);
--- 
--- TABLE: Historial 
---
-ALTER TABLE Historial
-ADD CONSTRAINT FK_HISTORIAL_PERFIL FOREIGN KEY (Id_Perfil, Id_Usuario) REFERENCES Perfil(Id_Perfil, Id_Usuario);
--- 
--- TABLE: HistorialContenido 
---
-ALTER TABLE HistorialContenido
-ADD CONSTRAINT RefCapitulos92 FOREIGN KEY (Id_Capitulo, Id_Serie, Id_Contenido) REFERENCES Capitulos(Id_Capitulo, Id_Serie, Id_Contenido);
-ALTER TABLE HistorialContenido
-ADD CONSTRAINT RefPelicula102 FOREIGN KEY (Id_Pelicula, Id_Contenido) REFERENCES Pelicula(Id_Pelicula, Id_Contenido);
-ALTER TABLE HistorialContenido
-ADD CONSTRAINT FK_EDOREP_HISTORIAL FOREIGN KEY (Id_Historial) REFERENCES Historial(Id_Historial);
--- 
--- TABLE: Pelicula 
---
-ALTER TABLE Pelicula
-ADD CONSTRAINT FK_PELICULA_CONTENIDO FOREIGN KEY (Id_Contenido) REFERENCES Contenido(Id_Contenido);
--- 
--- TABLE: Perfil 
---
-ALTER TABLE Perfil
-ADD CONSTRAINT FK_PERFIL_USUARIO FOREIGN KEY (Id_Usuario) REFERENCES Usuario(Id_Usuario);
--- 
--- TABLE: Serie 
---
-ALTER TABLE Serie
-ADD CONSTRAINT FK_SERIE_CONTENIDO FOREIGN KEY (Id_Contenido) REFERENCES Contenido(Id_Contenido);
+CREATE TABLE Contenido(
+    Id_Contenido BIGINT NOT NULL AUTO_INCREMENT,
+    Id_TipoContenido TINYINT NOT NULL,
+    Id_Genero TINYINT NOT NULl,
+    CONT_Nombre VARCHAR(40) NOT NULL,
+    CONT_FechaLanz DATE NOT NULL,
+    CONT_Cover MEDIUMBLOB NOT NULL,
+    CONT_Trailer VARCHAR(50) NOT NULL,
+    CONT_Descripcion VARCHAR(200) NOT NULL,
+    CONSTRAINT PK_Contenido PRIMARY KEY (Id_Contenido),
+    CONSTRAINT FK_Genero_Contenido FOREIGN KEY (Id_Genero) REFERENCES Genero(Id_Genero),
+    CONSTRAINT FK_TipoContenido FOREIGN KEY (Id_TipoContenido) REFERENCES TipoContenido(Id_TipoContenido)
+);
+CREATE TABLE Pelicula(
+    Id_Pelicula BIGINT NOT NULL AUTO_INCREMENT,
+    Id_Contenido BIGINT NOT NULL,
+    PELI_Source LONGBLOB NOT NULL,
+    PELI_Duracion SMALLINT NOT NULL,
+    CONSTRAINT PK_Pelicula PRIMARY KEY (Id_Pelicula),
+    CONSTRAINT FK_Contenido_Pelicula FOREIGN KEY (Id_Contenido) REFERENCES Contenido(Id_Contenido),
+    CONSTRAINT UQ_Pelicula_Contenido UNIQUE (Id_Contenido, Id_Pelicula)
+);
+CREATE TABLE Serie(
+    Id_Serie BIGINT NOT NULL AUTO_INCREMENT,
+    Id_Contenido BIGINT NOT NULL,
+    SER_Capitulos SMALLINT NOT NULL,
+    SERIE_Temporadas TINYINT NOT NULL,
+    CONSTRAINT PK_Serie PRIMARY KEY (Id_Serie),
+    CONSTRAINT FK_Contenido_Serie FOREIGN KEY (Id_Contenido) REFERENCES Contenido(Id_Contenido),
+    CONSTRAINT UQ_Serie_Contenido UNIQUE (Id_Contenido, Id_Serie)
+);
+CREATE TABLE Capitulo(
+    Id_Capitulo BIGINT NOT NULL AUTO_INCREMENT,
+    Id_Serie BIGINT NOT NULL,
+    CAP_Source LONGBLOB NOT NULL,
+    CAP_Duracion VARCHAR(20) NOT NULL,
+    CAP_Temporada TINYINT NOT NULL,
+    CAP_Number TINYINT NOT NULL,
+    CAP_Cover MEDIUMBLOB NOT NULL,
+    CONSTRAINT PK_Serie PRIMARY KEY (Id_Capitulo),
+    CONSTRAINT UQ_Capitulo_Serie UNIQUE (Id_Serie, Id_Capitulo)
+);
+CREATE TABLE Historial(
+    Id_Historial BIGINT NOT NULL AUTO_INCREMENT,
+    Id_Perfil BIGINT NOT NULL,
+    Id_Contenido BIGINT NOT NULL,
+    CONSTRAINT PK_Historial PRIMARY KEY (Id_Historial),
+    CONSTRAINT FK_Contenido_Historial FOREIGN KEY (Id_Contenido) REFERENCES Contenido(Id_Contenido),
+    CONSTRAINT FK_Perfil_Historial FOREIGN KEY (Id_Perfil) REFERENCES Perfil(Id_Perfil),
+    CONSTRAINT UQ_Perfil_Historial UNIQUE (Id_Perfil, Id_Historial)
+);
