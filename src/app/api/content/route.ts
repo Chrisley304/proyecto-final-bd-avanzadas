@@ -20,7 +20,9 @@ export async function GET() {
                             description: item.description,
                             launchDate: item.launchDate,
                             type: item.type,
-                            coverImage: item.coverImage,
+                            coverImage: `data:image/jpeg;base64,${Buffer.from(
+                                item.coverImage
+                            ).toString("base64")}`,
                             trailerLink: item.trailerLink,
                             category: item.category,
                             info: {
@@ -43,7 +45,9 @@ export async function GET() {
                             description: item.description,
                             launchDate: item.launchDate,
                             type: item.type,
-                            coverImage: item.coverImage,
+                            coverImage: `data:image/jpeg;base64,${Buffer.from(
+                                item.coverImage
+                            ).toString("base64")}`,
                             trailerLink: item.trailerLink,
                             category: item.category,
                             info: {

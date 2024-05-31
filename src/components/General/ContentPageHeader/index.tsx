@@ -29,6 +29,8 @@ export default function ContentPageHeader({
         : 0;
     const router = useRouter();
 
+    console.log("Content Image: ", content?.coverImage);
+
     return (
         <header className="container mx-auto py-10">
             {showBackButton && (
