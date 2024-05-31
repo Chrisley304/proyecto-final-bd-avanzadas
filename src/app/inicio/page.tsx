@@ -54,7 +54,9 @@ export default function Inicio() {
                 onActionButtonClick={() => setShowTrailer(true)}
                 secondaryButtonText="Ver detalles"
                 onSecondaryButtonClick={() =>
-                    router.push(`/detalle/${higlightedContent.id}`)
+                    router.push(
+                        `/detalle/${higlightedContent.type}/${higlightedContent.id}`
+                    )
                 }
             />
             <main className="container mx-auto mt-0 px-5 md:px-0 md:mt-5">

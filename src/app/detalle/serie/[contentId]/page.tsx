@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Select, SelectItem, Spinner } from "@nextui-org/react";
 import axios from "axios";
-import { Chapter, Content } from "@/types/Content";
+import { Chapter, Content, Serie } from "@/types/Content";
 import ContentPageHeader from "@/components/General/ContentPageHeader";
 import ChapterPreviewCard from "@/components/General/ChapterPreviewCard";
 import YoutubeEmbedVideo from "@/components/General/YoutubeEmbedVideo";
@@ -17,18 +17,16 @@ export default function DetailPage({ params }: Props) {
     const [selectedSeason, setSelectedSeason] = useState<string>("Temporada 1");
     const [showTrailer, setShowTrailer] = useState(false);
 
-    const seriesDuration =
-        typeof content?.info.duration === "number" ? content?.info.duration : 1;
+    const seriesDuration = (content?.info as Serie)?.duration || 1;
 
-    const chapters: Chapter[] = content?.info?.chapters || [];
+    const chapters: Chapter[] = (content?.info as Serie)?.chapters || [];
 
-    const seasons: string[] =
-        content && content.type === "serie"
-            ? Array.from(
-                  { length: seriesDuration },
-                  (_, i) => `Temporada ${i + 1}`
-              )
-            : [];
+    const seasons: string[] = content
+        ? Array.from({ length: seriesDuration }, (_, i) => `Temporada ${i + 1}`)
+        : [];
+
+    console.log("seasons: ", seasons);
+
     const launchYear = content
         ? new Date(content?.launchDate).getFullYear()
         : 0;
@@ -37,9 +35,8 @@ export default function DetailPage({ params }: Props) {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    `/api/content/detail/${params.contentId}`
+                    `/api/content/detail/serie/${params.contentId}`
                 );
-                console.log(response);
                 setContent(response.data);
             } catch (error) {
                 console.error(error);
@@ -77,38 +74,37 @@ export default function DetailPage({ params }: Props) {
                 onSecondaryButtonClick={handleTrailerClick}
                 showBackButton
             />
-            {content?.type === "serie" && (
-                <main className="container mx-auto mt-0 px-5 md:px-0 md:mt-5">
-                    <section className="mt-5">
-                        <h3 className="text-xl font-extrabold">Capítulos</h3>
-                        <Select
-                            label="Temporada"
-                            placeholder="Temporada"
-                            className="max-w-xs mt-5"
-                            selectedKeys={[selectedSeason]}
-                            onChange={handleSelectionChange}
-                        >
-                            {seasons.map((season) => (
-                                <SelectItem key={season}>{season}</SelectItem>
+
+            <main className="container mx-auto mt-0 px-5 md:px-0 md:mt-5">
+                <section className="mt-5">
+                    <h3 className="text-xl font-extrabold">Capítulos</h3>
+                    <Select
+                        label="Temporada"
+                        placeholder="Temporada"
+                        className="max-w-xs mt-5"
+                        selectedKeys={[selectedSeason]}
+                        onChange={handleSelectionChange}
+                    >
+                        {seasons.map((season) => (
+                            <SelectItem key={season}>{season}</SelectItem>
+                        ))}
+                    </Select>
+                    <div className="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+                        {chapters
+                            .filter(
+                                (chapter) =>
+                                    `Temporada ${chapter.season}` ===
+                                    selectedSeason
+                            )
+                            .map((chapter) => (
+                                <ChapterPreviewCard
+                                    key={chapter.id}
+                                    chapter={chapter}
+                                />
                             ))}
-                        </Select>
-                        <div className="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
-                            {chapters
-                                .filter(
-                                    (chapter) =>
-                                        `Temporada ${chapter.season}` ===
-                                        selectedSeason
-                                )
-                                .map((chapter) => (
-                                    <ChapterPreviewCard
-                                        key={chapter.id}
-                                        chapter={chapter}
-                                    />
-                                ))}
-                        </div>
-                    </section>
-                </main>
-            )}
+                    </div>
+                </section>
+            </main>
         </>
     );
 }

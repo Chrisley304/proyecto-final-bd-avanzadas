@@ -13,7 +13,7 @@ export default function ContentPreviewCard({ content }: Props) {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push(`/detalle/${content.id}`);
+        router.push(`/detalle/${content.type}/${content.id}`);
     };
 
     return (
@@ -33,10 +33,11 @@ export default function ContentPreviewCard({ content }: Props) {
                 <div>
                     <p className="text-sm text-white">{content.title}</p>
                     <p className="text-tiny text-white/80">
-                        {launchYear} | {content.category}
+                        {launchYear} |{" "}
+                        <span className="capitalize">{content.category}</span>
                     </p>
                     <p className="text-tiny text-white/80">
-                        {content.type} |{" "}
+                        <span className="capitalize">{content.type}</span> |{" "}
                         {`${content.info?.duration}${
                             content.type === "serie" ? " temporadas" : ""
                         }`}

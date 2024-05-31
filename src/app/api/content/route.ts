@@ -1,4 +1,3 @@
-import mockContent from "@/data/mock-content.json";
 import { Content } from "@/types/Content";
 import { db } from "@/utils/db";
 

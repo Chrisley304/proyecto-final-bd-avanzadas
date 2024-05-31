@@ -29,8 +29,6 @@ export default function ContentPageHeader({
         : 0;
     const router = useRouter();
 
-    console.log("Content Image: ", content?.coverImage);
-
     return (
         <header className="container mx-auto py-10">
             {showBackButton && (
@@ -46,9 +44,9 @@ export default function ContentPageHeader({
                     <div className="flex gap-2 my-5 text-lg">
                         <span>{launchYear}</span>
                         <span>|</span>
-                        <span>{content?.category}</span>
+                        <span className="capitalize">{content?.category}</span>
                         <span>|</span>
-                        <span>{content?.type}</span>
+                        <span className="capitalize">{content?.type}</span>
                     </div>
                     <p className="my-5 text-base">{content?.description}</p>
                     <div>

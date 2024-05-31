@@ -1,6 +1,6 @@
 export type Content = {
     id: number;
-    type: "pelicula" | "serie" | "documental";
+    type: "pelicula" | "serie";
     title: string;
     description: string;
     coverImage: string;
@@ -18,7 +18,6 @@ export type Serie = {
 
 export type Chapter = {
     id: number;
-    serieId: number;
     duration: string;
     season: number;
     number: number;
@@ -28,7 +27,6 @@ export type Chapter = {
 
 export type Movie = {
     id: number;
-    contentId: number;
     duration: string;
     source?: string;
 };
