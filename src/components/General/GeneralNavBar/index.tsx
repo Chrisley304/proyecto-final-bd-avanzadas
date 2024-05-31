@@ -44,6 +44,11 @@ export default function GeneralNavbar({}: Props) {
         router.push("/");
     };
 
+    const handleProfileChange = () => {
+        setAuth({ ...auth, selectedProfile: null });
+        router.push("/quien-esta-viendo");
+    };
+
     return (
         <Navbar className="fixed">
             <NavbarBrand>
@@ -51,7 +56,7 @@ export default function GeneralNavbar({}: Props) {
                     <Image src={logoMexFlix} alt="MexFlix" width={75} />
                 </Link>
             </NavbarBrand>
-            {isLoggedIn && (
+            {isLoggedIn && userProfile && (
                 <NavbarContent
                     className="hidden sm:flex gap-4"
                     justify="center"
@@ -102,10 +107,11 @@ export default function GeneralNavbar({}: Props) {
                                     </Button>
                                 </DropdownTrigger>
                                 <DropdownMenu aria-label="Static Actions">
-                                    <DropdownItem key="edit-profile">
-                                        <Link href="/quien-esta-viendo">
-                                            Seleccionar perfil
-                                        </Link>
+                                    <DropdownItem
+                                        key="edit-profile"
+                                        onClick={handleProfileChange}
+                                    >
+                                        Seleccionar perfil
                                     </DropdownItem>
                                     <DropdownItem
                                         key="delete"

@@ -3,23 +3,27 @@ import { Profile } from "@/types/User";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { BsPersonAdd } from "react-icons/bs";
+import { BsPencil, BsPencilFill, BsPersonAdd } from "react-icons/bs";
 
 type ProfileAvatarProps = {
     profile?: Profile | null;
     createNewProfile?: boolean;
+    handleNewProfile?: () => void;
+    handleEditProfile?: (profile: Profile) => void;
 };
 
 export default function ProfileAvatar({
     profile,
     createNewProfile = false,
+    handleNewProfile,
+    handleEditProfile,
 }: ProfileAvatarProps) {
     const { auth, setAuth } = useAuth();
     const router = useRouter();
 
     const handleClick = () => {
         if (createNewProfile) {
-            console.log("Crear nuevo perfil");
+            handleNewProfile && handleNewProfile();
         } else {
             if (!profile) return;
             const newAuth = {
@@ -32,8 +36,11 @@ export default function ProfileAvatar({
     };
 
     return (
-        <div className="flex flex-col gap-5 items-center" onClick={handleClick}>
-            <div className="relative inline-flex items-center justify-center w-36 h-36 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 cursor-pointer">
+        <div className="flex flex-col gap-5 items-center">
+            <div
+                className="relative inline-flex items-center justify-center w-36 h-36 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 cursor-pointer"
+                onClick={handleClick}
+            >
                 {createNewProfile ? (
                     <BsPersonAdd className="text-5xl" />
                 ) : (
@@ -44,10 +51,16 @@ export default function ProfileAvatar({
                     />
                 )}
             </div>
-            <div className="font-medium text-gray-600 dark:text-gray-300 text-2xl w-full text-center">
+            <div className="font-medium text-gray-600 dark:text-gray-300 text-2xl w-full flex gap-3 items-center justify-center">
                 {createNewProfile
                     ? "Crear nuevo perfil"
                     : profile?.profileNickname}
+                {!createNewProfile && (
+                    <BsPencilFill
+                        className="text-xl cursor-pointer"
+                        onClick={() => handleEditProfile(profile)}
+                    />
+                )}
             </div>
         </div>
     );
