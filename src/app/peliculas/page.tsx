@@ -1,11 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Button, Spinner } from "@nextui-org/react";
-import Image from "next/image";
-import { strangerThingsHeader } from "@/image-paths";
+import { Spinner } from "@nextui-org/react";
 import ContentPreviewCard from "@/components/General/ContentPreviewCard";
 import { useRouter } from "next/navigation";
-import useAuth from "@/hooks/useAuth";
 import axios from "axios";
 import ContentPageHeader from "@/components/General/ContentPageHeader";
 import { Content } from "@/types/Content";
@@ -13,7 +10,6 @@ import YoutubeEmbedVideo from "@/components/General/YoutubeEmbedVideo";
 
 export default function Peliculas() {
     const router = useRouter();
-    const { auth } = useAuth();
     const [content, setContent] = useState<Content[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [showTrailer, setShowTrailer] = useState(false);
