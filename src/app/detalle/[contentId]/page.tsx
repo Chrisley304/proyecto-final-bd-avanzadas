@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Select, SelectItem, Spinner } from "@nextui-org/react";
 import axios from "axios";
-import { Content } from "@/types/Content";
+import { Chapter, Content } from "@/types/Content";
 import ContentPageHeader from "@/components/General/ContentPageHeader";
 import ChapterPreviewCard from "@/components/General/ChapterPreviewCard";
 import YoutubeEmbedVideo from "@/components/General/YoutubeEmbedVideo";
@@ -17,10 +17,15 @@ export default function DetailPage({ params }: Props) {
     const [selectedSeason, setSelectedSeason] = useState<string>("Temporada 1");
     const [showTrailer, setShowTrailer] = useState(false);
 
+    const seriesDuration =
+        typeof content?.info.duration === "number" ? content?.info.duration : 1;
+
+    const chapters: Chapter[] = content?.info?.chapters || [];
+
     const seasons: string[] =
         content && content.type === "serie"
             ? Array.from(
-                  { length: content?.info.duration },
+                  { length: seriesDuration },
                   (_, i) => `Temporada ${i + 1}`
               )
             : [];
@@ -42,7 +47,7 @@ export default function DetailPage({ params }: Props) {
         };
 
         fetchData();
-    }, []);
+    }, [params.contentId]);
 
     const handleSelectionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedSeason(e.target.value);
@@ -70,6 +75,7 @@ export default function DetailPage({ params }: Props) {
                 onActionButtonClick={() => console.log("Ver ahora")}
                 secondaryButtonText="Ver trailer"
                 onSecondaryButtonClick={handleTrailerClick}
+                showBackButton
             />
             {content?.type === "serie" && (
                 <main className="container mx-auto mt-0 px-5 md:px-0 md:mt-5">
@@ -87,7 +93,7 @@ export default function DetailPage({ params }: Props) {
                             ))}
                         </Select>
                         <div className="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
-                            {content.info?.chapters
+                            {chapters
                                 .filter(
                                     (chapter) =>
                                         `Temporada ${chapter.season}` ===
