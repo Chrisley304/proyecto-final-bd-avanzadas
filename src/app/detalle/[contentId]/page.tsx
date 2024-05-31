@@ -1,19 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ContentPreviewCard from "@/components/General/ContentPreviewCard";
-import { strangerThingsHeader } from "@/image-paths";
-import {
-    Button,
-    Select,
-    SelectItem,
-    Selection,
-    Spinner,
-} from "@nextui-org/react";
+import { Select, SelectItem, Spinner } from "@nextui-org/react";
 import axios from "axios";
-import Image from "next/image";
 import { Content } from "@/types/Content";
 import ContentPageHeader from "@/components/General/ContentPageHeader";
 import ChapterPreviewCard from "@/components/General/ChapterPreviewCard";
+import YoutubeEmbedVideo from "@/components/General/YoutubeEmbedVideo";
 
 type Props = {
     params: { contentId: string };
@@ -22,7 +14,9 @@ type Props = {
 export default function DetailPage({ params }: Props) {
     const [isLoading, setIsLoading] = useState(true);
     const [content, setContent] = useState<Content | null>(null);
-    const [selectedSeason, setSelectedSeason] = useState<string>("");
+    const [selectedSeason, setSelectedSeason] = useState<string>("Temporada 1");
+    const [showTrailer, setShowTrailer] = useState(false);
+
     const seasons: string[] =
         content && content.type === "serie"
             ? Array.from(
@@ -54,18 +48,28 @@ export default function DetailPage({ params }: Props) {
         setSelectedSeason(e.target.value);
     };
 
+    const handleTrailerClick = () => {
+        setShowTrailer(true);
+    };
+
     return isLoading && !content ? (
         <div className="w-screen h-screen flex items-center justify-center">
             <Spinner size="lg" />
         </div>
     ) : (
         <>
+            {showTrailer && (
+                <YoutubeEmbedVideo
+                    videoLink={content?.trailerLink || ""}
+                    closeTrailer={() => setShowTrailer(false)}
+                />
+            )}
             <ContentPageHeader
                 content={content}
                 actionButtonText="Ver ahora"
                 onActionButtonClick={() => console.log("Ver ahora")}
                 secondaryButtonText="Ver trailer"
-                onSecondaryButtonClick={() => console.log("Ver trailer")}
+                onSecondaryButtonClick={handleTrailerClick}
             />
             {content?.type === "serie" && (
                 <main className="container mx-auto mt-0 px-5 md:px-0 md:mt-5">

@@ -11,7 +11,7 @@
             "duration": "2h 26m",
             "source": "https://example.com/el-resplandor.mp4"
         },
-        "trailerLink": "https://youtu.be/Y8z1LAkgR0s?si=vn1wF5ZW6lRiUyll",
+        "trailerLink": "https://www.youtube.com/watch?v=Y8z1LAkgR0s",
         "category": "terror",
         "launchDate": "1980-05-23T00:00:00.000Z"
     },
@@ -48,7 +48,7 @@
             ],
             "duration": 5
         },
-        "trailerLink": "https://youtu.be/mXd1zTwcQ18?si=3S0i7tBQDABJGpoR",
+        "trailerLink": "https://www.youtube.com/watch?v=mXd1zTwcQ18",
         "category": "acción",
         "launchDate": "2008-01-20T00:00:00.000Z"
     },
@@ -64,7 +64,7 @@
             "duration": "50m",
             "source": "https://example.com/nuestro-planeta.mp4"
         },
-        "trailerLink": "https://youtu.be/IrER_EpwGjg?si=V7ltZQjymWXTOTBL",
+        "trailerLink": "https://www.youtube.com/watch?v=IrER_EpwGjg",
         "category": "educación",
         "launchDate": "2019-04-05T00:00:00.000Z"
     },
@@ -117,7 +117,7 @@
             ],
             "duration": 4
         },
-        "trailerLink": "https://youtu.be/d0JYlUTbv1A?si=uQntibCHPftUNujQ",
+        "trailerLink": "https://www.youtube.com/watch?v=d0JYlUTbv1A",
         "category": "aventura",
         "launchDate": "2016-07-15T00:00:00.000Z"
     },

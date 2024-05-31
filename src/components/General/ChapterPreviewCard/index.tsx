@@ -10,7 +10,7 @@ type Props = {
 
 export default function ChapterPreviewCard({ chapter }: Props) {
     const handleClick = () => {
-        console.log("Reproduciendo capítulo", chapter.id);
+        console.log("Reproduciendo capítulo", chapter.number);
     };
 
     return (

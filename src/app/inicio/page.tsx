@@ -9,12 +9,14 @@ import useAuth from "@/hooks/useAuth";
 import axios from "axios";
 import ContentPageHeader from "@/components/General/ContentPageHeader";
 import { Content } from "@/types/Content";
+import YoutubeEmbedVideo from "@/components/General/YoutubeEmbedVideo";
 
 export default function Inicio() {
     const router = useRouter();
     const { auth } = useAuth();
     const [content, setContent] = useState<Content[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [showTrailer, setShowTrailer] = useState(false);
 
     useEffect(() => {
         if (!auth?.isLogged) {
@@ -46,10 +48,16 @@ export default function Inicio() {
         </div>
     ) : (
         <>
+            {showTrailer && (
+                <YoutubeEmbedVideo
+                    videoLink={higlightedContent?.trailerLink || ""}
+                    closeTrailer={() => setShowTrailer(false)}
+                />
+            )}
             <ContentPageHeader
                 content={higlightedContent}
                 actionButtonText="Ver trailer"
-                onActionButtonClick={() => console.log("Ver ahora")}
+                onActionButtonClick={() => setShowTrailer(true)}
                 secondaryButtonText="Ver detalles"
                 onSecondaryButtonClick={() =>
                     router.push(`/detalle/${higlightedContent.id}`)
