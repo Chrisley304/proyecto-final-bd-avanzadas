@@ -1,7 +1,6 @@
 CREATE DATABASE MexFlix;
 -- DROP DATABASE MexFlix;
-USE MexFlix;
-
+use MexFlix;
 CREATE TABLE Info_Bancaria(
     Id_InfoBancaria BIGINT NOT NULL AUTO_INCREMENT,
     INFOBANC_Caducidad DATE NOT NULL,
@@ -57,7 +56,7 @@ CREATE TABLE Pelicula(
     Id_Pelicula BIGINT NOT NULL AUTO_INCREMENT,
     Id_Contenido BIGINT NOT NULL,
     PELI_Source LONGBLOB NOT NULL,
-    PELI_Duracion SMALLINT NOT NULL,
+    PELI_Duracion VARCHAR(20) NOT NULL,
     CONSTRAINT PK_Pelicula PRIMARY KEY (Id_Pelicula),
     CONSTRAINT FK_Contenido_Pelicula FOREIGN KEY (Id_Contenido) REFERENCES Contenido(Id_Contenido),
     CONSTRAINT UQ_Pelicula_Contenido UNIQUE (Id_Contenido, Id_Pelicula)

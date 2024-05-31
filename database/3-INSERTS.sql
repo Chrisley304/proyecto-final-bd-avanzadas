@@ -1,5 +1,4 @@
-USE MexFlix;
-
+use MexFlix;
 INSERT INTO Info_Bancaria (
         INFOBANC_Caducidad,
         INFOBANC_NombrePropietario,
@@ -1294,7 +1293,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         1,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil Juan Perez'
     );
@@ -1302,7 +1301,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         1,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil Juan Perez 2'
     );
@@ -1310,7 +1309,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         2,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Maria Garcia'
     );
@@ -1318,7 +1317,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         2,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Maria Garcia 2'
     );
@@ -1326,7 +1325,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         3,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Carlos Sanchez'
     );
@@ -1334,7 +1333,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         3,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Carlos Sanchez 2'
     );
@@ -1342,7 +1341,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         4,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Laura Martinez'
     );
@@ -1350,7 +1349,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         4,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Laura Martinez 2'
     );
@@ -1358,7 +1357,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         5,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image5.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image5.jpg'
         ),
         'Perfil Ana Lopez'
     );
@@ -1366,7 +1365,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         5,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image5_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image5_2.jpg'
         ),
         'Perfil Ana Lopez 2'
     );
@@ -1374,7 +1373,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         6,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image6.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image6.jpg'
         ),
         'Perfil Luis Hernandez'
     );
@@ -1382,7 +1381,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         6,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image6_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image6_2.jpg'
         ),
         'Perfil Luis Hernandez 2'
     );
@@ -1390,7 +1389,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         7,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image7.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image7.jpg'
         ),
         'Perfil Marta Rodriguez'
     );
@@ -1398,7 +1397,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         7,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image7_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image7_2.jpg'
         ),
         'Perfil Marta Rodriguez 2'
     );
@@ -1406,7 +1405,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         8,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image8.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image8.jpg'
         ),
         'Perfil Pedro Gonzalez'
     );
@@ -1414,7 +1413,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         8,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image8_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image8_2.jpg'
         ),
         'Perfil Pedro Gonzalez 2'
     );
@@ -1422,7 +1421,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         9,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image9.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image9.jpg'
         ),
         'Perfil Claudia Diaz'
     );
@@ -1430,7 +1429,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         9,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image9_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image9_2.jpg'
         ),
         'Perfil Claudia Diaz 2'
     );
@@ -1438,7 +1437,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         10,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil Ricardo Ramirez'
     );
@@ -1446,7 +1445,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         10,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil Ricardo Ramirez 2'
     );
@@ -1454,7 +1453,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         11,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil Sofia Fernandez'
     );
@@ -1462,7 +1461,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         11,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil Sofia Fernandez 2'
     );
@@ -1470,7 +1469,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         12,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil Javier Morales'
     );
@@ -1478,7 +1477,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         12,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil Javier Morales 2'
     );
@@ -1486,7 +1485,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         13,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil Raquel Cruz'
     );
@@ -1494,7 +1493,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         13,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil Raquel Cruz 2'
     );
@@ -1502,7 +1501,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         14,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil Manuel Ortiz'
     );
@@ -1510,7 +1509,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         14,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil Manuel Ortiz 2'
     );
@@ -1518,7 +1517,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         15,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil Patricia Gomez'
     );
@@ -1526,7 +1525,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         15,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil Patricia Gomez 2'
     );
@@ -1534,7 +1533,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         16,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil David Ruiz'
     );
@@ -1542,7 +1541,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         16,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil David Ruiz 2'
     );
@@ -1550,7 +1549,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         17,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil Lucia Gutierrez'
     );
@@ -1558,7 +1557,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         17,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil Lucia Gutierrez 2'
     );
@@ -1566,7 +1565,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         18,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil Jose Torres'
     );
@@ -1574,7 +1573,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         18,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil Jose Torres 2'
     );
@@ -1582,7 +1581,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         19,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1.jpg'
         ),
         'Perfil Elena Flores'
     );
@@ -1590,7 +1589,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         19,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image1_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image1_2.jpg'
         ),
         'Perfil Elena Flores 2'
     );
@@ -1598,7 +1597,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         20,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Fernando Jimenez'
     );
@@ -1606,7 +1605,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         20,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Fernando Jimenez 2'
     );
@@ -1614,7 +1613,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         21,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Gabriela Perea'
     );
@@ -1622,7 +1621,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         21,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Gabriela Perea 2'
     );
@@ -1630,7 +1629,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         22,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Hector Castro'
     );
@@ -1638,7 +1637,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         22,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Hector Castro 2'
     );
@@ -1646,7 +1645,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         23,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Isabel Vega'
     );
@@ -1654,7 +1653,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         23,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Isabel Vega 2'
     );
@@ -1662,7 +1661,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         24,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Carlos Rivera'
     );
@@ -1670,7 +1669,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         24,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Carlos Rivera 2'
     );
@@ -1678,7 +1677,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         25,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Laura Silva'
     );
@@ -1686,7 +1685,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         25,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Laura Silva 2'
     );
@@ -1694,7 +1693,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         26,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Luis Romero'
     );
@@ -1702,7 +1701,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         26,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Luis Romero 2'
     );
@@ -1710,7 +1709,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         27,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Monica Soto'
     );
@@ -1718,7 +1717,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         27,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Monica Soto 2'
     );
@@ -1726,7 +1725,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         28,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Pedro Rios'
     );
@@ -1734,7 +1733,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         28,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Pedro Rios 2'
     );
@@ -1742,7 +1741,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         29,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2.jpg'
         ),
         'Perfil Sara Mendoza'
     );
@@ -1750,7 +1749,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         29,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image2_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image2_2.jpg'
         ),
         'Perfil Sara Mendoza 2'
     );
@@ -1758,7 +1757,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         30,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Ramon Vargas'
     );
@@ -1766,7 +1765,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         30,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Ramon Vargas 2'
     );
@@ -1774,7 +1773,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         31,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Beatriz Cabrera'
     );
@@ -1782,7 +1781,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         31,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Beatriz Cabrera 2'
     );
@@ -1790,7 +1789,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         32,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Esteban Lopez'
     );
@@ -1798,7 +1797,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         32,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Esteban Lopez 2'
     );
@@ -1806,7 +1805,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         33,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Diana Herrera'
     );
@@ -1814,7 +1813,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         33,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Diana Herrera 2'
     );
@@ -1822,7 +1821,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         34,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Victor Navarro'
     );
@@ -1830,7 +1829,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         34,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Victor Navarro 2'
     );
@@ -1838,7 +1837,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         35,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Alba Aguilar'
     );
@@ -1846,7 +1845,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         35,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Alba Aguilar 2'
     );
@@ -1854,7 +1853,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         36,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Mario Serrano'
     );
@@ -1862,7 +1861,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         36,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Mario Serrano 2'
     );
@@ -1870,7 +1869,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         37,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Eva Pena'
     );
@@ -1878,7 +1877,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         37,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Eva Pena 2'
     );
@@ -1886,7 +1885,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         38,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Pablo Lorenzo'
     );
@@ -1894,7 +1893,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         38,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Pablo Lorenzo 2'
     );
@@ -1902,7 +1901,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         39,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3.jpg'
         ),
         'Perfil Angela Espinoza'
     );
@@ -1910,7 +1909,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         39,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image3_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image3_2.jpg'
         ),
         'Perfil Angela Espinoza 2'
     );
@@ -1918,7 +1917,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         40,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Cristina Marquez'
     );
@@ -1926,7 +1925,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         40,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Cristina Marquez 2'
     );
@@ -1934,7 +1933,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         41,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Oscar Fuentes'
     );
@@ -1942,7 +1941,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         41,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Oscar Fuentes 2'
     );
@@ -1950,7 +1949,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         42,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Gloria Tapia'
     );
@@ -1958,7 +1957,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         42,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Gloria Tapia 2'
     );
@@ -1966,7 +1965,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         43,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Jorge Estrada'
     );
@@ -1974,7 +1973,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         43,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Jorge Estrada 2'
     );
@@ -1982,7 +1981,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         44,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Teresa Valdez'
     );
@@ -1990,7 +1989,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         44,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Teresa Valdez 2'
     );
@@ -1998,7 +1997,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         45,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Miguel Paredes'
     );
@@ -2006,7 +2005,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         45,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Miguel Paredes 2'
     );
@@ -2014,7 +2013,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         46,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Rosa Galindo'
     );
@@ -2022,7 +2021,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         46,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Rosa Galindo 2'
     );
@@ -2030,7 +2029,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         47,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Ignacio Ortega'
     );
@@ -2038,7 +2037,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         47,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Ignacio Ortega 2'
     );
@@ -2046,7 +2045,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         48,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Alicia Bravo'
     );
@@ -2054,7 +2053,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         48,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Alicia Bravo 2'
     );
@@ -2062,7 +2061,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         49,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4.jpg'
         ),
         'Perfil Felipe Moreno'
     );
@@ -2070,7 +2069,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         49,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image4_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image4_2.jpg'
         ),
         'Perfil Felipe Moreno 2'
     );
@@ -2078,7 +2077,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         50,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image5.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image5.jpg'
         ),
         'Perfil Felipe Carrillo'
     );
@@ -2086,7 +2085,7 @@ INSERT INTO Perfil (Id_Usuario, PERF_Img, PERF_Nombre)
 VALUES (
         50,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/image5_2.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\image5_2.jpg'
         ),
         'Perfil Felipe Carrillo 2'
     );
@@ -2118,7 +2117,7 @@ VALUES (
         'Breaking Bad',
         '2008-01-20',
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/breaking_bad_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\breaking_bad_cover.jpg'
         ),
         'https://www.youtube.com/watch?v=mXd1zTwcQ18',
         3,
@@ -2138,7 +2137,7 @@ VALUES (
         'Game of Thrones',
         '2011-04-17',
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/got_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\got_cover.jpg'
         ),
         'https://www.youtube.com/watch?v=9bwcu6rewSY',
         3,
@@ -2158,7 +2157,7 @@ VALUES (
         'Stranger Things',
         '2016-07-15',
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/stranger_things_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\stranger_things_cover.jpg'
         ),
         'https://www.youtube.com/watch?v=x7Yq9MJUqjY',
         3,
@@ -2178,7 +2177,7 @@ VALUES (
         'The Crown',
         '2016-11-04',
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/the_crown_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\the_crown_cover.jpg'
         ),
         'https://www.youtube.com/watch?v=zzBjNG1GKu4',
         3,
@@ -2198,7 +2197,7 @@ VALUES (
         'The Mandalorian',
         '2019-11-12',
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/the_mandalorian_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\the_mandalorian_cover.jpg'
         ),
         'https://www.youtube.com/watch?v=GIoc0DRz7ak',
         3,
@@ -2218,7 +2217,7 @@ VALUES (
         'Inception',
         '2010-07-16',
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/inception_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\inception_cover.jpg'
         ),
         'https://www.youtube.com/watch?v=WrRMioLGFxs',
         3,
@@ -2238,7 +2237,7 @@ VALUES (
         'El Caballero de la Noche Asciende',
         '2008-07-18',
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/dark_knight_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\dark_knight_cover.jpg'
         ),
         'https://www.youtube.com/watch?v=RkBsJ7m7NF8',
         2,
@@ -2258,7 +2257,7 @@ VALUES (
         'Interstellar',
         '2014-11-07',
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/interestellar_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\interestellar_cover.jpg'
         ),
         'https://www.youtube.com/watch?v=QOIyFLQpN_w',
         3,
@@ -2278,7 +2277,7 @@ VALUES (
         'The Godfather',
         '1972-03-24',
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/godfather_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\godfather_cover.jpg'
         ),
         'https://www.youtube.com/watch?v=gCVj1LeYnsc',
         3,
@@ -2298,7 +2297,7 @@ VALUES (
         'Forrest Gump',
         '1994-07-06',
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/forrest_gump_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\forrest_gump_cover.jpg'
         ),
         'https://www.youtube.com/watch?v=GIs2gpWpBiQ',
         3,
@@ -2308,41 +2307,41 @@ INSERT INTO Pelicula (Id_Contenido, PELI_Source, PELI_Duracion)
 VALUES (
         6,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/peliculas/inception_source.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\peliculas\\inception_source.mp4'
         ),
-        148
+        "148 minutos"
     );
 INSERT INTO Pelicula (Id_Contenido, PELI_Source, PELI_Duracion)
 VALUES (
         7,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/peliculas/dark_knight_source.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\peliculas\\dark_knight_source.mp4'
         ),
-        152
+        "152 minutos"
     );
 INSERT INTO Pelicula (Id_Contenido, PELI_Source, PELI_Duracion)
 VALUES (
         8,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/peliculas/interstellar_source.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\peliculas\\interstellar_source.mp4'
         ),
-        169
+        "169 minutos"
     );
 INSERT INTO Pelicula (Id_Contenido, PELI_Source, PELI_Duracion)
 VALUES (
         9,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/peliculas/godfather_source.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\peliculas\\godfather_source.mp4'
         ),
-        175
+        "175 minutos"
     );
 INSERT INTO Pelicula (Id_Contenido, PELI_Source, PELI_Duracion)
 VALUES (
         10,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/peliculas/forrest_gump_source.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\peliculas\\forrest_gump_source.mp4'
         ),
-        142
+        "142 minutos"
     );
 INSERT INTO Serie(Id_Contenido, SER_Capitulos, SERIE_Temporadas)
 VALUES (1, 62, 5);
@@ -2370,13 +2369,13 @@ INSERT INTO Capitulo (
 VALUES (
         1,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/series/breaking_bad_s1e1.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\series\\breaking_bad_s1e1.mp4'
         ),
         '58 minutos',
         1,
         1,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/capcover/breaking_bad_cap_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\capcover\\breaking_bad_cap_cover.jpg'
         )
     );
 INSERT INTO Capitulo (
@@ -2390,13 +2389,13 @@ INSERT INTO Capitulo (
 VALUES (
         1,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/series/breaking_bad_s1e2.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\series\\breaking_bad_s1e2.mp4'
         ),
         '48 minutos',
         1,
         2,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/capcover/breaking_bad_cap_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\capcover\\breaking_bad_cap_cover.jpg'
         )
     );
 INSERT INTO Capitulo (
@@ -2410,13 +2409,13 @@ INSERT INTO Capitulo (
 VALUES (
         2,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/series/got_s1e1.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\series\\got_s1e1.mp4'
         ),
         '62 minutos',
         1,
         1,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/capcover/got_cap_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\capcover\\got_cap_cover.jpg'
         )
     );
 INSERT INTO Capitulo (
@@ -2430,13 +2429,13 @@ INSERT INTO Capitulo (
 VALUES (
         2,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/series/got_s1e2.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\series\\got_s1e2.mp4'
         ),
         '56 minutos',
         1,
         2,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/capcover/got_cap_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\capcover\\got_cap_cover.jpg'
         )
     );
 INSERT INTO Capitulo (
@@ -2450,13 +2449,13 @@ INSERT INTO Capitulo (
 VALUES (
         3,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/series/stranger_things_s1e1.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\series\\stranger_things_s1e1.mp4'
         ),
         '47 minutos',
         1,
         1,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/capcover/stranger_things_cap_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\capcover\\stranger_things_cap_cover.jpg'
         )
     );
 INSERT INTO Capitulo (
@@ -2470,13 +2469,13 @@ INSERT INTO Capitulo (
 VALUES (
         3,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/series/stranger_things_s1e2.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\series\\stranger_things_s1e2.mp4'
         ),
         '55 minutos',
         1,
         2,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/capcover/stranger_things_cap_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\capcover\\stranger_things_cap_cover.jpg'
         )
     );
 INSERT INTO Capitulo (
@@ -2490,13 +2489,13 @@ INSERT INTO Capitulo (
 VALUES (
         4,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/series/the_crown_s1e1.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\series\\the_crown_s1e1.mp4'
         ),
         '58 minutos',
         1,
         1,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/capcover/the_crown_cap_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\capcover\\the_crown_cap_cover.jpg'
         )
     );
 INSERT INTO Capitulo (
@@ -2510,13 +2509,13 @@ INSERT INTO Capitulo (
 VALUES (
         4,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/series/the_crown_s1e2.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\series\\the_crown_s1e2.mp4'
         ),
         '61 minutos',
         1,
         2,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/capcover/the_crown_cap_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\capcover\\the_crown_cap_cover.jpg'
         )
     );
 INSERT INTO Capitulo (
@@ -2530,13 +2529,13 @@ INSERT INTO Capitulo (
 VALUES (
         5,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/series/the_mandalorian_s1e1.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\series\\the_mandalorian_s1e1.mp4'
         ),
         '39 minutos',
         1,
         1,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/capcover/the_mandaloria_cap_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\capcover\\the_mandaloria_cap_cover.jpg'
         )
     );
 INSERT INTO Capitulo (
@@ -2550,52 +2549,72 @@ INSERT INTO Capitulo (
 VALUES (
         5,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/videos/series/the_mandalorian_s1e2.mp4'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\videos\\series\\the_mandalorian_s1e2.mp4'
         ),
         '42 minutos',
         1,
         2,
         LOAD_FILE(
-            '/Users/chrisley/Documents/Development/React/proyecto-final-bd-avanzadas/database/mock/imagenes/Portada/capcover/the_mandaloria_cap_cover.jpg'
+            'C:\\ProgramData\\MySQL\\MySQL Server 8.4\\Uploads\\imagenes\\Portada\\capcover\\the_mandaloria_cap_cover.jpg'
         )
     );
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (1, 6);
+--- Película: Inception
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (1, 1);
+--- Capítulo: Breaking Bad S1E1
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (2, 7);
+--- Película: The Dark Knight
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (2, 2);
+--- Capítulo: Game of Thrones S1E1
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (3, 8);
+--- Película: Interstellar
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (3, 3);
+--- Capítulo: Stranger Things S1E1
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (4, 9);
+--- Película: The Godfather
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (4, 1);
+--- Capítulo: Breaking Bad S1E2--- Perfil 5
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (5, 10);
+--- Película: Forrest Gump
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (5, 2);
+--- Capítulo: Game of Thrones S1E2
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (6, 6);
+--- Película: Inception
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (6, 3);
+--- Capítulo: Stranger Things S1E2
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (7, 7);
+--- Película: The Dark Knight
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (7, 1);
+--- Capítulo: Breaking Bad S1E1
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (8, 8);
+--- Película: Interstellar
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (8, 2);
+--- Capítulo: Game of Thrones S1E1
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (9, 9);
+--- Película: The Godfather
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (9, 3);
+--- Capítulo: Stranger Things S1E1
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (10, 10);
+--- Película: Forrest Gump
 INSERT INTO Historial (Id_Perfil, Id_Contenido)
 VALUES (10, 1);
+--- Capítulo: Breaking Bad S1E2

@@ -21,7 +21,6 @@ export type Profile = {
 };
 
 export type BankInfo = {
-    id: number;
     expirationDate: string;
     cardFullName: string;
     cardNumber: string;

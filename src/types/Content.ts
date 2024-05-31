@@ -4,7 +4,7 @@ export type Content = {
     title: string;
     description: string;
     coverImage: string;
-    info: Serie | Movie;
+    info?: Serie | Movie;
     trailerLink: string;
     category: "terror" | "acción" | "aventura" | "eduación" | string;
     launchDate: string;
@@ -12,8 +12,7 @@ export type Content = {
 
 export type Serie = {
     id: number;
-    contentId: number;
-    chapters: Chapter[];
+    chapters?: Chapter[];
     duration: number;
 };
 
@@ -23,7 +22,7 @@ export type Chapter = {
     duration: string;
     season: number;
     number: number;
-    source: string | null;
+    source?: string;
     coverImage: string | null;
 };
 
@@ -31,7 +30,7 @@ export type Movie = {
     id: number;
     contentId: number;
     duration: string;
-    source: string | null;
+    source?: string;
 };
 
 export type History = {
