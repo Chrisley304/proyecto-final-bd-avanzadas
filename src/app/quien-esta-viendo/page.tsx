@@ -13,9 +13,10 @@ import {
     Button,
     useDisclosure,
 } from "@nextui-org/react";
+import axios from "axios";
 
 export default function QuienEstaViendo() {
-    const { auth } = useAuth();
+    const { auth, setAuth } = useAuth();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [file, setFile] = useState<File | null>(null);
     const [profileName, setProfileName] = useState<string>("");
@@ -31,19 +32,43 @@ export default function QuienEstaViendo() {
 
     const handleUpload = async () => {
         const formData = new FormData();
-        formData.append("file", file as Blob);
+        formData.append("profileImage", file as File);
         formData.append("profileName", profileName);
+        formData.append("userId", String(auth?.user?.id));
 
-        // try {
-        //     // const response = await axios.post("/api/profiles", formData, {
-        //     //     headers: {
-        //     //         "Content-Type": "multipart/form-data",
-        //     //     },
-        //     // });
-        //     // console.log(response);
-        // } catch (error) {
-        //     console.error(error);
-        // }
+        try {
+            if (profileToEdit) {
+            } else {
+                const response = await axios.post("/api/profile", formData, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                });
+                console.log("response", response.data);
+
+                if (response.data.success) {
+                    setAuth({
+                        ...auth,
+                        user: {
+                            ...auth?.user,
+                            profiles: [
+                                ...profiles,
+                                {
+                                    id: response.data.profileId,
+                                    profileImage: `data:image/jpeg;base64,${Buffer.from(
+                                        await file.arrayBuffer()
+                                    ).toString("base64")}`,
+                                    profileNickname: profileName,
+                                },
+                            ],
+                        },
+                    });
+                    console.log("newAuth", auth);
+                }
+            }
+        } catch (error) {
+            console.error(error);
+        }
         onClose();
     };
 
