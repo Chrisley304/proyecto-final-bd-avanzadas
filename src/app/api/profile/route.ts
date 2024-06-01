@@ -61,3 +61,61 @@ export async function POST(request: Request) {
         );
     }
 }
+
+export async function PUT(request: Request) {
+    try {
+        const data = await request.formData();
+        const profileImage: File | string | null = data.get("profileImage");
+        const profileName = data.get("profileName");
+        const profileId = data.get("profileId");
+
+        if (
+            !profileId ||
+            !profileImage ||
+            !profileName ||
+            typeof profileImage === "string"
+        ) {
+            return Response.json(
+                {
+                    message:
+                        "User id, profile name and profile image are required",
+                    success: false,
+                },
+                {
+                    status: 400,
+                }
+            );
+        }
+
+        const profileBuffer = Buffer.from(await profileImage.arrayBuffer());
+
+        const result: any[] = await db.query(
+            "UPDATE PERFIL SET PERF_Img=?, PERF_Nombre=? WHERE Id_Perfil = ?",
+            [profileBuffer, profileName, profileId]
+        );
+
+        if (result.affectedRows === 0) {
+            return Response.json(
+                {
+                    message: "No se creo el perfil",
+                    sucess: false,
+                },
+                {
+                    status: 404,
+                }
+            );
+        }
+
+        return Response.json({ success: true });
+    } catch (error) {
+        console.log(error);
+        return Response.json(
+            {
+                message: error?.message || "Internal server error",
+            },
+            {
+                status: 500,
+            }
+        );
+    }
+}

@@ -30,6 +30,29 @@ export default function QuienEstaViendo() {
         }
     };
 
+    const handleDelete = async () => {
+        if (profileToEdit) {
+            const response = await axios.delete(
+                `/api/profile/${profileToEdit.id}`
+            );
+
+            if (response.data.success) {
+                setAuth({
+                    ...auth,
+                    user: {
+                        ...auth?.user,
+                        profiles: [
+                            ...profiles.filter(
+                                (prof) => prof.id !== profileToEdit.id
+                            ),
+                        ],
+                    },
+                });
+            }
+        }
+        onClose();
+    };
+
     const handleUpload = async () => {
         const formData = new FormData();
         formData.append("profileImage", file as File);
@@ -38,6 +61,33 @@ export default function QuienEstaViendo() {
 
         try {
             if (profileToEdit) {
+                formData.append("profileId", String(profileToEdit.id));
+                const response = await axios.put("/api/profile", formData, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                });
+
+                if (response.data.success) {
+                    setAuth({
+                        ...auth,
+                        user: {
+                            ...auth?.user,
+                            profiles: [
+                                ...profiles.filter(
+                                    (prof) => prof.id !== profileToEdit.id
+                                ),
+                                {
+                                    id: response.data.profileId,
+                                    profileImage: `data:image/jpeg;base64,${Buffer.from(
+                                        await file.arrayBuffer()
+                                    ).toString("base64")}`,
+                                    profileNickname: profileName,
+                                },
+                            ],
+                        },
+                    });
+                }
             } else {
                 const response = await axios.post("/api/profile", formData, {
                     headers: {
@@ -118,13 +168,15 @@ export default function QuienEstaViendo() {
                                 </form>
                             </ModalBody>
                             <ModalFooter>
-                                <Button
-                                    color="danger"
-                                    variant="light"
-                                    onPress={onClose}
-                                >
-                                    Cancelar
-                                </Button>
+                                {profileToEdit && (
+                                    <Button
+                                        color="danger"
+                                        variant="flat"
+                                        onPress={handleDelete}
+                                    >
+                                        Eliminar perfil
+                                    </Button>
+                                )}
                                 <Button
                                     color="primary"
                                     onPress={handleUpload}
@@ -143,7 +195,7 @@ export default function QuienEstaViendo() {
                 <div className="text-4xl font-bold text-gray-600 dark:text-gray-300">
                     ¿Quién está viendo?
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-16">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-16">
                     {profiles.map((profile) => (
                         <ProfileAvatar
                             key={profile.id}
@@ -151,10 +203,12 @@ export default function QuienEstaViendo() {
                             handleEditProfile={handleEditProfile}
                         />
                     ))}
-                    <ProfileAvatar
-                        createNewProfile
-                        handleNewProfile={handleNewProfile}
-                    />
+                    {profiles.length < 3 && (
+                        <ProfileAvatar
+                            createNewProfile
+                            handleNewProfile={handleNewProfile}
+                        />
+                    )}
                 </div>
             </div>
         </>
