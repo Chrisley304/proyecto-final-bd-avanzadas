@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import useAuth from "@/hooks/useAuth";
-import { useRouter } from "next/navigation";
-import { Avatar, Input } from "@nextui-org/react";
+import { Input } from "@nextui-org/react";
 import ProfileAvatar from "@/components/General/ProfileAvatar";
 import { Profile } from "@/types/User";
 import {
@@ -16,18 +15,13 @@ import {
 } from "@nextui-org/react";
 
 export default function QuienEstaViendo() {
+    const { auth } = useAuth();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [file, setFile] = useState<File | null>(null);
     const [profileName, setProfileName] = useState<string>("");
     const [profileToEdit, setProfileToEdit] = useState<Profile | null>(null);
 
-    const testProfiles: Profile[] = [
-        {
-            id: 1,
-            profileNickname: "Chris",
-            profileImage: "https://randomuser.me/api/portraits/lego/6.jpg",
-        },
-    ];
+    const profiles: Profile[] = auth?.user?.profiles || [];
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {
@@ -125,7 +119,7 @@ export default function QuienEstaViendo() {
                     ¿Quién está viendo?
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-16">
-                    {testProfiles.map((profile) => (
+                    {profiles.map((profile) => (
                         <ProfileAvatar
                             key={profile.id}
                             profile={profile}

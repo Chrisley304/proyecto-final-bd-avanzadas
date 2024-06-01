@@ -6,6 +6,7 @@ import { EyeFilledIcon } from "@/components/Icons/EyeFilledIcon";
 import { useRouter } from "next/navigation";
 import mockUsers from "@/data/mock-users.json";
 import useAuth from "@/hooks/useAuth";
+import axios from "axios";
 
 export default function Home() {
     const [isVisible, setIsVisible] = useState(false);
@@ -19,15 +20,24 @@ export default function Home() {
     const isButtonDisabled = email === "" || password === "";
 
     const handleLogin = () => {
-        const foundAuth = mockUsers.find(
-            (el) => el.user.email === email && el.user.password === password
-        );
-        if (foundAuth) {
-            setAuth(foundAuth);
-            router.push("/quien-esta-viendo");
-        } else {
-            alert("Usuario o contraseña incorrectos");
-        }
+        const fetchData = async () => {
+            try {
+                const response = await axios.post(`/api/auth/login`, {
+                    email,
+                    password,
+                });
+                if (response.status === 200 && response.data) {
+                    setAuth(response.data);
+                    router.push("/quien-esta-viendo");
+                } else {
+                    alert("Usuario o contraseña incorrectos");
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchData();
     };
 
     return (
@@ -64,8 +74,6 @@ export default function Home() {
                         variant="faded"
                         value={password}
                         onValueChange={setPassword}
-                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
-                        errorMessage="La contraseña debe tener al menos 8 caracteres, una mayúscula, una minuscula, un numero y un caracter especial."
                         endContent={
                             <button
                                 className="focus:outline-none"

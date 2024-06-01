@@ -1,7 +1,6 @@
 export type Auth = {
     user: User | null;
-    isLogged: boolean;
-    selectedProfile: Profile | null;
+    selectedProfile?: Profile | null;
 };
 
 export type User = {

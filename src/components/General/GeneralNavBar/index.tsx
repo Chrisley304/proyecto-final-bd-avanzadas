@@ -27,7 +27,7 @@ type Props = {};
 
 export default function GeneralNavbar({}: Props) {
     const { auth, setAuth } = useAuth();
-    const isLoggedIn = auth?.isLogged || false;
+    const isLoggedIn = auth !== null;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const actualPath = usePathname();
     const router = useRouter();
